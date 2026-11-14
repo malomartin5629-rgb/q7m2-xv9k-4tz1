@@ -254,6 +254,7 @@ table.tb{width:100%;border-collapse:collapse;font-size:15px}
 @media (max-width:640px){.tuto-box.banner{grid-template-columns:1fr}.tuto-box.banner .tuto-actions{grid-column:1;grid-row:auto;flex-direction:row;justify-content:space-between;margin-top:4px}}
 .bl{position:absolute;left:1.2cqi;bottom:1.2cqi;z-index:5;display:flex;flex-direction:column;align-items:flex-start;gap:.35cqi}
 .bl .resbar{position:static}
+.bl{position:absolute}
 .map-btn{display:flex;align-items:center;gap:.45em;font-family:"Shippori Mincho B1",serif;font-weight:800;font-size:max(12px,.95cqi);color:var(--ink);background:none;cursor:pointer;border-width:9px;border-image-width:9px;padding:.05em .55em .05em .25em}
 .map-btn .seal{font-size:max(10px,.85cqi)}
 .map-btn:focus-visible{outline:2px solid var(--vermilion);outline-offset:2px}
@@ -281,6 +282,72 @@ table.tb{width:100%;border-collapse:collapse;font-size:15px}
 .sum-line{display:flex;justify-content:space-between;gap:12px;font-size:16px;padding:4px 0}
 .tb .stepper button{width:30px;height:28px;font-size:17px}
 .tb .stepper output{min-width:36px;font-size:15px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(122px,1fr));gap:8px;margin:0 0 16px}
+.tile{border:1px solid var(--line);border-radius:4px;padding:7px 10px 8px;background:rgba(255,250,238,.55);min-width:0}
+.tile .tl{display:block;font-size:13px;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tile .tv{display:block;font-family:"Shippori Mincho B1",serif;font-weight:800;font-size:21px;line-height:1.2}
+.tile .tv small{font-size:.6em;font-weight:600}
+.tile .ts{display:block;font-size:13px;color:var(--ink-soft);line-height:1.25}
+.tile.warn{border-color:var(--bar-warn);background:rgba(181,134,44,.08)}
+.tile.bad{border-color:var(--vermilion);background:rgba(163,50,29,.07)}
+.tile.bad .tv{color:var(--vermilion)}
+.tile.good{border-color:var(--moss)}
+.pills{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 10px}
+.pill{font-family:"Shippori Mincho B1",serif;font-weight:700;font-size:14px;padding:.32em .85em;border:1px solid var(--line);border-radius:999px;background:transparent;cursor:pointer;color:var(--ink)}
+.pill:hover{background:rgba(61,22,12,.07)}
+.pill[aria-pressed="true"]{background:var(--lacquer);color:var(--paper);border-color:var(--lacquer)}
+.pill .n{display:inline-block;margin-left:.4em;min-width:1.3em;padding:0 .3em;border-radius:999px;background:var(--vermilion);color:var(--vermilion-ink);font-size:12px;line-height:1.5}
+.pill:focus-visible{outline:2px solid var(--vermilion);outline-offset:2px}
+.pc{display:grid;grid-template-columns:1fr auto;gap:3px 12px;align-items:center;padding:8px 11px;border:1px solid var(--line);border-radius:4px;background:rgba(255,250,238,.45)}
+.pc + .pc{margin-top:6px}
+.pc .pn{font-family:"Shippori Mincho B1",serif;font-weight:800;font-size:16px;min-width:0}
+.pc .pe{grid-column:1;font-size:14.5px;color:var(--ink-soft);min-width:0}
+.pc .pa{grid-column:2;grid-row:1/span 2;display:flex;flex-direction:column;align-items:flex-end;gap:5px}
+.pc.dim{opacity:.62}
+.pc .short,.short{color:var(--vermilion);font-weight:600}
+.btn.sm{font-size:13px;padding:.32em .75em}
+.cost{display:inline-flex;gap:10px;flex-wrap:wrap;font-size:13.5px;font-variant-numeric:tabular-nums;color:var(--ink);margin-top:2px}
+.cost span{white-space:nowrap}
+.cost b{font-family:"Shippori Mincho B1",serif;font-weight:800;color:var(--lacquer);margin-right:3px}
+.cost span.short,.cost span.short b{color:var(--vermilion)}
+.dots{letter-spacing:2px;color:var(--vermilion);font-size:13px;margin-left:6px}
+details.fold{border-top:1px solid var(--line);margin:12px 0 0}
+details.fold>summary,details.zone>summary{cursor:pointer;list-style:none}
+details.fold>summary{font-family:"Shippori Mincho B1",serif;font-weight:700;font-size:15px;padding:.55em 0;color:var(--ink-soft)}
+details.fold>summary::before,details.zone>summary .pn::before{content:"▸";display:inline-block;width:1em;transition:transform .15s}
+details.fold[open]>summary::before,details.zone[open]>summary .pn::before{transform:rotate(90deg)}
+details.fold>summary::-webkit-details-marker,details.zone>summary::-webkit-details-marker{display:none}
+details.fold>summary:focus-visible,details.zone>summary:focus-visible{outline:2px solid var(--vermilion);outline-offset:2px}
+details.fold>.fb{padding:0 0 6px}
+details.zone{border:1px solid var(--line);border-radius:4px;background:rgba(255,250,238,.45)}
+details.zone + details.zone{margin-top:6px}
+details.zone>summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;padding:8px 11px}
+details.zone>summary .pn{font-family:"Shippori Mincho B1",serif;font-weight:800;font-size:16px}
+details.zone>summary .zs{font-size:14px;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+details.zone .zb{padding:0 11px 10px}
+details.zone .zb .pc{background:transparent}
+.needs{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:6px}
+.need{display:flex;gap:8px;align-items:flex-start;padding:6px 9px;border:1px solid var(--line);border-radius:4px;font-size:14.5px;line-height:1.25}
+.need i{font-style:normal;font-weight:800;flex:none;width:1em;text-align:center}
+.need small{display:block;color:var(--ink-soft);font-size:12.5px}
+.need.ok{border-color:var(--moss)}.need.ok i{color:var(--moss)}
+.need.ko{border-color:var(--vermilion);background:rgba(163,50,29,.06)}.need.ko i{color:var(--vermilion)}
+.need.wait{border-style:dashed}
+.bl-top{display:flex;gap:.35cqi;align-items:stretch}
+.alert-btn{display:flex;align-items:center;gap:.4em;font-family:"Shippori Mincho B1",serif;font-weight:800;font-size:max(12px,.95cqi);color:var(--vermilion);background:none;cursor:pointer;border-width:9px;border-image-width:9px;padding:.05em .55em}
+.alert-btn[hidden]{display:none}
+.alert-btn .dot{width:.6em;height:.6em;border-radius:50%;background:var(--vermilion);animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.alert-btn .dot{animation:none}}
+.alert-pop{position:absolute;left:0;bottom:calc(100% + 6px);width:min(340px,80vw);border-width:12px;border-image-width:12px;padding:4px 6px;color:var(--ink);font-size:15px;z-index:8}
+.alert-pop[hidden]{display:none}
+.alert-pop h4{font-family:"Shippori Mincho B1",serif;margin:.1em 0 .35em}
+.alert-pop button{display:block;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:.45em .2em;cursor:pointer;font:inherit;color:inherit}
+.alert-pop button:hover{background:rgba(61,22,12,.07)}
+.sec h3{flex-wrap:wrap}
+@media (max-width:560px){.pc{grid-template-columns:1fr}.pc .pa{grid-column:1;grid-row:auto;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-items:center}.tiles{grid-template-columns:repeat(2,1fr)}}
+@media (orientation:portrait) and (max-width:820px){.alert-pop{bottom:auto;top:calc(100% + 6px)}}
+.gp-st{margin:.2em 0 .5em;padding-left:1.1em;font-size:15px}.gp-st li{margin:.15em 0;color:var(--ink-soft,#6b5a48)}.gp-st li.done{color:var(--bar-ok,#4d7a3a)}.gp-st li.next{color:var(--ink)}
 .bbar{position:relative;height:14px;border-radius:7px;background:var(--vermilion);overflow:hidden;border:1px solid var(--line)}
 .bbar i{position:absolute;inset:0 auto 0 0;background:var(--bar-ok);transition:width .4s ease}
 .map-tabs{position:absolute;left:1.2cqi;top:1.2cqi;display:flex;gap:2px;padding:2px;border-width:9px;border-image-width:9px}
@@ -311,7 +378,7 @@ table.tb{width:100%;border-collapse:collapse;font-size:15px}
 <body>
 <div class="viewport" id="viewport">
   <div class="stage" id="stage">
-    <div class="bl"><button type="button" class="paper map-btn" id="mapBtn"><span class="seal" aria-hidden="true">図</span>Carte</button><div class="resbar paper" id="resbar"></div></div>
+    <div class="bl"><div class="bl-top"><button type="button" class="paper map-btn" id="mapBtn"><span class="seal" aria-hidden="true">図</span>Carte</button><button type="button" class="paper alert-btn" id="alertBtn" hidden aria-expanded="false"><span class="dot" aria-hidden="true"></span><span id="alertN">0</span></button></div><div class="alert-pop paper" id="alertPop" hidden></div><div class="resbar paper" id="resbar"></div></div>
     <div class="br">
       <div class="hud-tl paper">
         <div class="style-switch"><button type="button" class="menu-btn" id="openTitle">Menu</button><button type="button" class="menu-btn" id="musicBtn" aria-pressed="true" title="Musique">♪</button><span role="radiogroup" aria-label="Style du village" style="display:flex;gap:2px">
@@ -504,6 +571,88 @@ var BLD_LEVELS={
  chef:["Maison du chef","Grange commune","Digues de pierre"],
  residence:["Résidence","Salle de réception","Pavillon de thé"]
 };
+var GP={
+ route:{l:"Route pavée de Tsuruga",t:2,d:"Relier Kawashiro au grand marché de la vallée.",st:[
+  {l:"Chemin empierré",e:"tes caravanes et tes messagers dans la vallée sont attaqués 30 % moins souvent.",mon:400,bois:80,work:80},
+  {l:"Relais de poste",e:"une décade de moins pour tes caravanes et tes messagers dans la vallée.",mon:700,bois:120,work:120},
+  {l:"Route pavée",e:"des marchands passent chaque mois : un revenu régulier, et plus de commandes.",mon:1200,bois:150,fer:20,work:160}]},
+ port:{l:"Pont de pierre et port fluvial",t:2,d:"Dompter la rivière et en faire une route.",st:[
+  {l:"Pont de pierre",e:"les crues et les typhons n’abîment presque plus les rizières du bord de rivière.",mon:500,bois:100,work:90},
+  {l:"Quai",e:"tes caravanes vers Ishiba et Hamana rapportent 20 % de plus et vont une décade plus vite.",mon:800,bois:150,work:130},
+  {l:"Port fluvial",e:"des bateaux apportent du poisson et du sel chaque mois, et la pêcherie produit 30 % de plus.",mon:1300,bois:200,fer:30,work:180}]},
+ halle:{l:"Grand marché des deux provinces",t:2,d:"Faire de Kawashiro une place de commerce.",st:[
+  {l:"Halle couverte",e:"le marché d’Ihei baisse deux fois moins ses prix quand tu vends beaucoup.",mon:450,bois:90,work:90},
+  {l:"Entrepôts",e:"ton grenier peut contenir deux fois plus de riz.",mon:800,bois:140,work:130},
+  {l:"Foire annuelle",e:"chaque automne, une grande foire à Kawashiro : tu y vends tes marchandises au prix des caravanes, sans voyager.",mon:1400,bois:180,work:170}]},
+ pelerinage:{l:"Sanctuaire de pèlerinage",t:3,d:"Attirer les pèlerins de tout le pays.",st:[
+  {l:"Torii et escalier",e:"+3 d’honneur, et le village tend vers un contentement plus haut (+2).",mon:800,bois:150,work:140},
+  {l:"Auberges de pèlerins",e:"les pèlerins dépensent leur argent : un revenu chaque mois, selon la taille du village.",mon:1400,bois:200,work:180},
+  {l:"Grand sanctuaire",e:"Kawashiro attire les familles de toute la région, et typhons, nuées et sécheresses font 40 % de dégâts en moins.",mon:2200,bois:260,work:240}]},
+ academie:{l:"Académie militaire",t:3,d:"Former les meilleurs soldats des deux provinces.",st:[
+  {l:"Terrain d’exercice",e:"les ashigaru coûtent 30 % moins cher, et le dojo peut en loger 40 de plus.",mon:700,bois:120,work:120},
+  {l:"Maître d’armes",e:"chaque mois, tes samouraïs présents peuvent progresser au combat sans entraînement.",mon:1300,bois:160,work:170},
+  {l:"Académie",e:"de meilleurs samouraïs viennent se proposer, et ton armée se bat 8 % mieux.",mon:2000,bois:200,fer:40,work:220}]},
+ enceinte:{l:"Enceinte de la ville-château",t:3,d:"Faire de Kawashiro une place forte.",st:[
+  {l:"Douves",e:"la défense du village augmente de 50 %.",mon:1000,bois:250,work:180},
+  {l:"Remparts",e:"les bandits n’osent plus attaquer le village.",mon:1800,bois:350,work:240},
+  {l:"Grande porte",e:"toute attaque contre Kawashiro devient un siège : l’ennemi perd 30 % de sa force, et Sagara cesse de te mépriser.",mon:3000,bois:400,fer:60,work:300}]}
+};
+function gpL(k){return (S.gp&&S.gp[k])||0}
+function gpCost(k){var st=GP[k].st[gpL(k)];return st?{mon:st.mon,bois:st.bois,fer:st.fer||0,work:st.work}:null}
+function canPayGP(k){var c=gpCost(k);return !!c&&canPay(c)&&!chBusy("gp",k)&&S.tier>=GP[k].t}
+var GAM={grenier:["Grenier","Le riz que le village t’envoie augmente de 10 % par niveau."],marche:["Marché","Les marchandises que le village t’envoie augmentent de 15 % par niveau."],palis:["Palissade","Protège le village des pillages et de Sagara. Au niveau 3, ou avec 20 ashigaru en garnison, Sagara n’ose plus le réclamer."],temple:["Temple","Loyauté +1 par mois et par niveau, et le village grandit 15 % plus vite par niveau."]};
+function gamL(g,t){return (g.am&&g.am[t])||0}
+function gamCost(g,t){var l=gamL(g,t);return {mon:Math.round(g.pop*[.4,.8,1.4][l]+30*(l+1)),bois:Math.round(g.pop*.08*(l+1)+10)}}
+function ashiCap(){return [20,40,80][S.niv.dojo-1]+(gpL("academie")>=1?40:0)}
+function ashiCost(){return gpL("academie")>=1?.7:1}
+function ashiGar(){var t=0;for(var k in S.gov)t+=S.gov[k].gar||0;return t}
+function ashiCamp(){return S.campagne&&S.campagne.ashi||0}
+function ashiHome(){return Math.max(0,(S.ashi||0)-ashiGar()-ashiCamp())}
+function ashiVal(){return soldierValue()*1.6}
+function fixGar(){var over=ashiGar()+ashiCamp()-S.ashi;if(over<=0)return;Object.keys(S.gov).forEach(function(k){var g=S.gov[k];while(over>0&&g.gar>0){var r=Math.min(10,g.gar);g.gar-=r;over-=r}});if(over>0&&S.campagne)S.campagne.ashi=Math.max(0,S.campagne.ashi-over)}
+function grenierCap(){return [300,800,2000][S.niv.grenier-1]*(gpL("halle")>=2?2:1)}
+var NEEDS=[
+ {k:"famille",t:0,l:"Riz des familles"},
+ {k:"sel",t:1,q:1,l:"Sel"},
+ {k:"poterie",t:1,q:.5,l:"Poterie"},
+ {k:"fete",t:1,l:"Une fête dans l’année"},
+ {k:"sake",t:2,q:1,l:"Saké"},
+ {k:"poterie2",g:"poterie",t:2,q:1,l:"Plus de poterie"},
+ {k:"peaux",t:2,w:true,l:"Vêtements chauds en hiver (peaux)"},
+ {k:"papier",t:3,q:1,l:"Papier"},
+ {k:"soie",t:3,q:.2,l:"Soie pour les familles aisées"},
+ {k:"temple",t:3,l:"Un grand temple ou un sanctuaire"}
+];
+function needList(){return NEEDS.filter(function(n){return n.t<=(S.tier||0)})}
+function needQty(n){return n.q?Math.max(1,Math.round(S.pop/100*n.q*10)/10):0}
+function consumeNeeds(){
+ var out={};
+ needList().forEach(function(n){
+  if(n.k==="famille")out[n.k]=S.famille>0;
+  else if(n.k==="fete")out[n.k]=mIdx()-(S.lastFete||-99)<12;
+  else if(n.k==="temple")out[n.k]=!!S.prod.grandtemple||gpL("pelerinage")>=1;
+  else if(n.k==="peaux")out[n.k]=isWinter(S.mois)?S.flags.peaux===S.an:(S.needs&&S.needs.peaux!==undefined?S.needs.peaux:true);
+  else{var g=n.g||n.k,q=needQty(n);if((S.biens[g]||0)>=q){S.biens[g]-=q;out[n.k]=true}else{S.biens[g]=0;out[n.k]=false}}
+ });
+ S.needs=out;
+}
+function needGrace(n){return n.t>0&&n.t===S.tier&&S.tierSince!==undefined&&mIdx()-S.tierSince<6}
+function needsPct(){var l=needList(),m=0;l.forEach(function(n){if(S.needs&&S.needs[n.k])m++});return l.length?m/l.length:1}
+function contEq(){
+ var p=[["Base",55]],t={faible:8,normal:0,lourd:hasN("bienveillance")?-6:-12}[S.impot];if(t)p.push(["Impôt "+TAX[S.impot].label.toLowerCase(),t]);
+ needList().forEach(function(n){var m=S.needs&&S.needs[n.k];if(m===undefined)return;if(!m&&needGrace(n)){p.push([n.l+" (nouveau besoin, encore "+(6-(mIdx()-S.tierSince))+" mois de patience)",0]);return}p.push([n.l,m?4:-6])});
+ if(S.pop>S.logement)p.push(["Village surpeuplé",-10]);else if(S.logement-S.pop>=10)p.push(["Logements libres",3]);
+ if(S.menace>=60)p.push(["Peur des bandits",-8]);
+ if(S.niv.temple>=2)p.push(["Temple",(S.niv.temple-1)*2]);
+ if(S.prod.ecole)p.push(["École du temple",2]);
+ if(S.prod.grandtemple)p.push(["Grand temple",3]);
+ if(gpL("pelerinage")>=1)p.push(["Sanctuaire de pèlerinage",2]);
+ var lv=Math.floor(levesK()/6);if(lv)p.push(["Hommes levés",-lv]);
+ if(S.honneur>=75)p.push(["Un seigneur respecté",3]);else if(S.honneur<30)p.push(["Un seigneur méprisé",-5]);
+ var v=0;p.forEach(function(x){v+=x[1]});return {v:clamp(Math.round(v),5,100),p:p};
+}
+function attract(){return clamp(Math.round(S.cont*.4+S.honneur*.2+needsPct()*20+(S.menace<40?10:0)+(S.niv.marche-1)*5+(gpL("pelerinage")>=3?15:0)),0,100)}
+function refuge(k){var L=S.lieux[k];if(!L||L.gouv||!LIEUX_DEF[k].pop||hasPending("refugies")||!chance(.45))return;var n=clamp(Math.round(L.pop*(.03+Math.random()*.05)),4,40);pushEvent("refugies",{k:k,n:n})}
 var BLD_EFFECT={
  grenier:["Les rats mangent 2 % du riz chaque mois.","Les rats n’en mangent plus que 1 %.","Plus aucune perte due aux rats."],
  dojo:["Entraînement ordinaire.","L’entraînement réussit plus souvent.","Chaque soldat compte davantage au combat."],
@@ -516,8 +665,10 @@ var BLD_EFFECT={
 var UPG_COST={2:{mon:70,bois:20,work:40},3:{mon:140,bois:40,work:60}};
 
 var PROJ={
- maisons:{l:"Nouvelles maisons",d:"De quoi loger dix habitants de plus. Les familles ne s’installent que s’il y a de la place.",mon:30,bois:20,work:30,cat:"village",req:function(){return true},done:function(){S.prod.maisons++;S.logement+=hasN("batisseur")?15:10}},
- maisons2:{l:"Rue de maisons de bois",d:"Toute une rue : de quoi loger vingt-cinq habitants de plus.",mon:60,bois:40,work:50,cat:"village",req:function(){return S.tier>=1},done:function(){S.prod.maisons++;S.logement+=hasN("batisseur")?38:25}},
+ maisons:{repeat:true,l:"Nouvelles maisons",d:"De quoi loger dix habitants de plus. Les familles ne s’installent que s’il y a de la place.",mon:30,bois:20,work:30,cat:"village",req:function(){return true},done:function(){S.prod.maisons++;S.logement+=hasN("batisseur")?15:10}},
+ maisons2:{repeat:true,l:"Rue de maisons de bois",d:"Toute une rue : de quoi loger vingt-cinq habitants de plus.",mon:60,bois:40,work:50,cat:"village",req:function(){return S.tier>=1},done:function(){S.prod.maisons++;S.logement+=hasN("batisseur")?38:25}},
+ quartier:{repeat:true,l:"Nouveau quartier",d:"Plusieurs rues autour d’un puits commun : de quoi loger soixante habitants de plus.",mon:150,bois:80,work:80,cat:"village",req:function(){return S.tier>=2},done:function(){S.prod.maisons++;S.logement+=hasN("batisseur")?90:60}},
+ grandquartier:{repeat:true,l:"Grand quartier",d:"Tout un quartier de ville, avec ses ruelles et ses boutiques : de quoi loger cent cinquante habitants de plus.",mon:350,bois:160,fer:10,work:140,cat:"village",req:function(){return S.tier>=3},done:function(){S.prod.maisons++;S.logement+=hasN("batisseur")?225:150}},
  grandmarche:{l:"Grand marché",d:"Des étals pour les marchands de passage : les taxes du marché rapportent 30 % de plus.",mon:110,bois:35,work:55,cat:"village",req:function(){return S.tier>=1&&!S.prod.grandmarche},done:function(){S.prod.grandmarche=true}},
  qartisans:{l:"Quartier des artisans",d:"Les ateliers se regroupent : toutes les productions augmentent de 20 %.",mon:160,bois:50,work:70,cat:"village",req:function(){return S.tier>=2&&!S.prod.qartisans},done:function(){S.prod.qartisans=true}},
  remparts:{l:"Remparts",d:"Le village se défend 30 % mieux, et la menace des bandits monte moins vite.",mon:180,bois:70,work:90,cat:"village",req:function(){return S.tier>=2&&!S.prod.remparts},done:function(){S.prod.remparts=true}},
@@ -559,9 +710,9 @@ function newGame(){
   niv:{grenier:1,dojo:1,marche:1,temple:1,porte:1,chef:1,residence:1},
   prod:{charbon:false,sake:false,muriers:0,soie:false,papier:false,poterie:false,forge:false,pecherie:false,ecurie:false,infirmerie:false,auberge:false,ecole:false,entrepot:false,sanctuaire:false,maisons:0},
   taches:{foret:0,constr:0,garde:0,charbon:0,sake:0,soie:0,papier:0,poterie:0,forge:0,peche:0,chasse:0},tpct:{foret:0,constr:0,garde:0,charbon:0,sake:0,soie:0,papier:0,poterie:0,forge:0,peche:0,chasse:0},wl:{charbon:1,sake:1,soie:1,papier:1,poterie:1,forge:1,pecherie:1},zones:initZones(),news:[{t:"Printemps, an 1",x:"Le seigneur Sagara passe ses troupes en revue sous les murs d’Ōmiya.",k:"omiya",p:2},{t:"Printemps, an 1",x:"Les rizières d’Inaho promettent une belle récolte.",k:"inaho",p:2},{t:"Printemps, an 1",x:"Les marchands reviennent sur la route de Tsuruga après l’hiver.",k:"tsuruga",p:1},{t:"Printemps, an 1",x:"On dit que les bandits du col ont recruté des rōnin cet hiver.",k:null,p:1}],alertes:[],meteo2:"normale",
-  biens:{charbon:0,sake:0,soie:0,papier:0,poterie:0,fer:0,sel:0,poisson:0,armes:0,peaux:0},chevaux:0,logement:160,pm:{},pmPrev:{},commandes:[],artisans:[],fils:{age:7,sabre:1,lettres:1,gestion:1,adulte:false,role:null,epouse:null,awayUntil:0},bil:{},bilanPrev:null,stockPrev:null,recrue:null,recrueSaison:null,honneur:50,merite:0,arbre:{},gov:{},affaire:null,juris:{dettes:0,sam:0,vols:0},lord:{nom:"Toi",age:34,gen:1},epouse:"Chiyo",tier:0,bestHarvest:0,
+  biens:{charbon:0,sake:0,soie:0,papier:0,poterie:0,fer:0,sel:0,poisson:0,armes:0,peaux:0},chevaux:0,logement:165,pm:{},pmPrev:{},commandes:[],artisans:[],fils:{age:7,sabre:1,lettres:1,gestion:1,adulte:false,role:null,epouse:null,awayUntil:0},bil:{},bilanPrev:null,stockPrev:null,recrue:null,recrueSaison:null,honneur:50,merite:0,arbre:{},gov:{},affaire:null,juris:{dettes:0,sam:0,vols:0},lord:{nom:"Toi",age:34,gen:1},epouse:"Chiyo",tier:0,bestHarvest:0,
   foret:100,cov:{s:0,w:0},meteo:"normale",meteoPred:null,eauAmont:0,
-  chantier:null,
+  chantiers:[],gp:{},ashi:0,ashiUnpaid:0,needs:{},lastFete:-99,
   sam:[
    {id:"genba",nom:"Tsuchiya Genba",traits:["loyal","pieux"],desc:"Il sert ta famille depuis vingt ans.",force:6,cmd:6,ges:5,age:52,xp:2,loy:82,blesse:0},
    {id:"tetsu",nom:"Okabe Tetsunosuke",traits:["ambitieux","fier"],desc:"Le meilleur sabre du village, et il le sait.",force:8,cmd:5,ges:3,age:31,xp:1,loy:52,blesse:0},
@@ -578,6 +729,8 @@ function migrate(o){
   if(d[k]&&typeof d[k]==="object"&&!Array.isArray(d[k])&&["lieux","pm","pmPrev","bil","flags","once","seen"].indexOf(k)<0){for(var j in d[k])if(o[k][j]===undefined)o[k][j]=d[k][j]}
  }
  if(o.pop>o.logement-5)o.logement=Math.ceil((o.pop+10)/10)*10;
+ if(o.chantier){if(!o.chantier.uid)o.chantier.uid=++o.seq;o.chantiers.push(o.chantier)}delete o.chantier;
+ for(var gk0 in o.gov){var g0=o.gov[gk0];if(!g0.am)g0.am={grenier:0,marche:0,palis:0,temple:0};if(g0.gar===undefined)g0.gar=0}
  if(!o.juris)o.juris={dettes:0,sam:0,vols:0};
  LIEUX_ORDER.forEach(function(k){var n=initLieu(k);if(!o.lieux[k])o.lieux[k]=n;else{for(var j in n)if(o.lieux[k][j]===undefined)o.lieux[k][j]=n[j]}});
  if(o.parcelles){var zs=initZones(),map={riviere:0,plaine:1,amont:2,terrasse:3};zs.forEach(function(z){z.n=0;z.cap=0});o.parcelles.forEach(function(p){var z=zs[map[p.type]];z.cap++;if(p.etat==="cultivee")z.n++;else if(p.etat==="neuve")z.neuf++});zs.forEach(function(z){z.cap=Math.max(4,z.cap)});o.zones=zs;delete o.parcelles;var t=o.tier||0;for(var ti=1;ti<=t;ti++)expandZones(o.zones,ti)}
@@ -673,8 +826,18 @@ function flushFloats(){
 function W(){return Math.round(S.pop*.6)}
 function tasksSum(){var t=0;for(var k in S.taches)t+=S.taches[k];return t}
 function pctSum(){var t=0;for(var k in S.tpct)t+=S.tpct[k];return t}
-function chantierCap(c){c=c||S.chantier;if(!c)return 0;return Math.round(Math.max(6,c.total/5)*(1+(S.tier||0)*.5))}
-function constrEff(){return S.chantier?Math.min(S.taches.constr,chantierCap()):0}
+function chSlots(){return [1,2,3,4,5][Math.min(4,S.tier||0)]}
+function freeSlot(){return S.chantiers.length<chSlots()}
+function startCh(c){c.uid=++S.seq;S.chantiers.push(c);return c}
+function chBusy(type,id){return S.chantiers.some(function(c){return c.type===type&&c.id===id})}
+function zoneBusy(id){return S.chantiers.some(function(c){return c.id===id&&(c.type==="defr"||c.type==="zniv"||c.type==="zspec")})}
+function chantierCap(c){if(!c)return 0;return Math.round(Math.max(6,c.total/5)*(1+(S.tier||0)*.5))}
+function chAlloc(){var n=S.taches.constr||0,out={};S.chantiers.forEach(function(c){var a=Math.min(n,chantierCap(c));out[c.uid]=a;n-=a});return out}
+function constrEff(){var a=chAlloc(),t=0;for(var k in a)t+=a[k];return t}
+function constrCapTot(){var t=0;S.chantiers.forEach(function(c){t+=chantierCap(c)});return t}
+function chByUid(u){for(var i=0;i<S.chantiers.length;i++)if(S.chantiers[i].uid===u)return S.chantiers[i];return null}
+function hireWork(c){return c?Math.ceil(Math.min(c.reste,c.total*.25)):0}
+function hireCost(c){return Math.round(hireWork(c)*(4+(S.tier||0)))}
 function tasksEff(){return tasksSum()-S.taches.constr+constrEff()}
 function fieldWorkers(){return Math.max(0,W()-levesK()-S.absents-tasksEff())}
 function freeForTasks(){return Math.max(0,W()-levesK()-S.absents)}
@@ -713,8 +876,8 @@ function harvestEstimate(){
  return {total:total,taxed:taxed,trib:trib,net:taxed-trib,fam:total-taxed};
 }
 function damagePlots(type,amount){
- var mult=(S.niv.chef>=3?.5:1)*(S.prod.sanctuaire?.75:1),n=0;
- S.zones.forEach(function(z){if(z.n>0&&(!type||z.type===type)){z.dmg=clamp(z.dmg+amount*mult*(z.spec&&z.type==="riviere"?.5:1),0,.9);n++}});
+ var mult=(S.niv.chef>=3?.5:1)*(S.prod.sanctuaire?.75:1)*(gpL("pelerinage")>=3?.6:1),n=0;
+ S.zones.forEach(function(z){if(z.n>0&&(!type||z.type===type)){z.dmg=clamp(z.dmg+amount*mult*(z.spec&&z.type==="riviere"?.5:1)*(z.type==="riviere"&&gpL("port")>=1?.3:1),0,.9);n++}});
  return n;
 }
 function lotSize(){return [2,5,10,25,25][S.tier||0]}
@@ -733,12 +896,13 @@ function homePower(){
  for(var k in S.lieux)if(S.lieux[k].allie)p+=S.lieux[k].force*.3;
  if(S.flags.moines>idx())p+=15;
  if(S.flags.renfort>idx()){for(var k2 in S.lieux)if(S.lieux[k2].allie)p+=S.lieux[k2].force*.3;Object.keys(S.gov).forEach(function(g){p+=S.gov[g].pop*.04})}
- p*=(S.prod.remparts?1.3:1)*(S.prod.chateau?1.5:1);
+ p+=ashiHome()*ashiVal();
+ p*=(S.prod.remparts?1.3:1)*(S.prod.chateau?1.5:1)*(gpL("enceinte")>=1?1.5:1);
  return Math.round(p);
 }
 function campPower(c){
  var p=0,n=0;c.sam.forEach(function(id){var s=samBy(id);if(s&&!s.blesse){p+=s.force;n++}});
- p=p*(1+.15*S.equip)+c.soldats*soldierValue()+Math.min(S.chevaux,n*2)*1.5;
+ p=p*(1+.15*S.equip)+c.soldats*soldierValue()+(c.ashi||0)*ashiVal()+Math.min(S.chevaux,n*2)*1.5;
  return p*(.7+c.moral/100*.6);
 }
 function banditPower(){return Math.round(8+S.menace*.22+rnd(0,8))}
@@ -747,7 +911,7 @@ function known(id){return hasN("rumeurs")||idx()-S.lieux[id].connu<=9}
 function relWord(r){return r<=-40?"Hostiles":r<-10?"Méfiants":r<15?"Neutres":r<40?"Cordiaux":"Amicaux"}
 function contWord(c){return c<=15?"Au bord de la révolte":c<=30?"Mécontents":c<=50?"Inquiets":c<=70?"Calmes":"Heureux"}
 function menaceWord(m){return m<25?"Les collines sont calmes.":m<45?"On a vu des inconnus rôder près du col.":m<65?"Les bandits s’enhardissent.":m<80?"Une attaque se prépare, c’est certain.":"L’attaque est imminente."}
-function monthlyExpense(){var home=S.sam.filter(function(s){return campSamIds().indexOf(s.id)<0&&!s.gov}).length;return 3+2*home+Math.ceil(homeSoldiers()/5)+Math.ceil(S.chevaux*.5)+S.artisans.length}
+function monthlyExpense(){var home=S.sam.filter(function(s){return campSamIds().indexOf(s.id)<0&&!s.gov}).length;return 3+2*home+Math.ceil(homeSoldiers()/5)+Math.ceil((S.ashi||0)/5)+Math.ceil(S.chevaux*.5)+S.artisans.length}
 function hasArt(id){return S.artisans.indexOf(id)>=0}
 function famConso(){return S.pop*.15*(hasN("greniers")?.95:1)*(S.flags.yoheiGrenier===S.an?.95:1)}
 
@@ -1009,7 +1173,7 @@ var EV={
   choices:[{l:"Accepter la commande",h:"Tu la retrouveras au marché, onglet Commandes.",ok:function(){return S.commandes.length<3},fx:function(e){S.commandes.push(e.c);return "Marché conclu."}},{l:"Refuser poliment",fx:function(){return "Tant pis, une autre fois."}}]},
  nouvel_an:{cool:0,title:"Le Nouvel An",who:"Toute la maisonnée",text:function(){return "Les cloches du temple sonnent cent huit coups pour chasser les malheurs de l’année passée. Le village attend de voir comment tu ouvres l’an "+S.an+"."},
   choices:[
-   {l:"Une grande fête (15 riz, 30 mon, 5 saké)",h:"Le village commence l’année le cœur léger. Sans saké, la fête est moins réussie.",ok:function(){return S.riz>=15&&S.mon>=30},fx:function(){ch("riz",-15);ch("mon",-30);if(S.biens.sake>=5){S.biens.sake-=5;ch("cont",10);return "Mochi, saké et tambours jusqu’à l’aube."}ch("cont",5);return "Mochi et tambours, mais les jarres de saké sont vides. On s’amuse quand même."}},
+   {l:"Une grande fête (15 riz, 30 mon, 5 saké)",h:"Le village commence l’année le cœur léger. Sans saké, la fête est moins réussie.",ok:function(){return S.riz>=15&&S.mon>=30},fx:function(){ch("riz",-15);ch("mon",-30);S.lastFete=mIdx();if(S.biens.sake>=5){S.biens.sake-=5;ch("cont",10);S.flags.faste=mIdx()+12;return "Mochi, saké et tambours jusqu’à l’aube. On parle déjà de mariages pour le printemps."}ch("cont",5);return "Mochi et tambours, mais les jarres de saké sont vides. On s’amuse quand même."}},
    {l:"Offrir le saké de l’an neuf à tes samouraïs",h:"Une jarre par samouraï : leur loyauté monte. Le village, lui, n’a rien.",ok:function(){return S.sam.length&&S.biens.sake>=S.sam.length},fx:function(){S.biens.sake-=S.sam.length;S.sam.forEach(function(x){samLoy(x,has(x,"ivrogne")?2:7)});ch("cont",-1);return "Tes samouraïs boivent à ta santé jusqu’à l’aube."}},
    {l:"Envoyer tes vœux au seigneur Ōtsuki",h:"Cinq jarres de saké, ou quarante mon si tu n’en as pas.",ok:function(){return S.biens.sake>=5||S.mon>=40},fx:function(){if(S.biens.sake>=5){S.biens.sake-=5;ch("faveur",9);return "Le seigneur apprécie ton saké. On dit qu’il a parlé de toi à sa table."}ch("mon",-40);ch("faveur",6);return "Le seigneur reçoit tes vœux et ton présent."}},
    {l:"Une fête simple, en famille",fx:function(){ch("cont",2);return "Un repas tranquille, quelques prières au temple."}}
@@ -1339,6 +1503,26 @@ var EV={
    {l:"Lui confier aussi les greniers des familles",h:"Les familles gaspillent moins. Yohei prendra beaucoup de pouvoir.",fx:function(){S.flags.yoheiGrenier=S.an;ch("famille",10);ch("cont",-3);return "Yohei tient désormais les clés des greniers du village."}},
    {l:"Garder les vieilles habitudes",fx:function(){ch("cont",1);return "« Comme vous voudrez, seigneur. »"}}
   ]},
+ refugies:{cool:0,title:function(e){return "Des réfugiés "+deLieu(e.k)},who:function(e){return "Un ancien "+deLieu(e.k)},
+  text:function(e){var L=S.lieux[e.k];return "« "+(L.famine?"Nos greniers sont vides et nos enfants ont faim.":"Notre village a été frappé par le malheur, nous avons tout perdu.")+" Seigneur, nous sommes "+e.n+" à demander un toit à Kawashiro. Nous travaillerons dur. » Logements libres : "+Math.max(0,S.logement-S.pop)+"."},
+  choices:function(e){var n=e.n,h=Math.ceil(n/2);return [
+   {l:"Les accueillir tous ("+(n*2)+" balles de riz)",h:n>S.logement-S.pop?"Il n’y a pas assez de maisons : le village sera surpeuplé un temps.":"Il y a de la place pour eux.",ok:function(){return S.riz>=n*2},fx:function(e){ch("riz",-n*2);S.lieux[e.k].pop=Math.max(20,S.lieux[e.k].pop-n);CAUSE="Réfugiés";ch("pop",n);rel(e.k,8);hon(1);if(LIEUX_DEF[e.k].prov===2)rel("omiya",e.k==="omiya"?-6:-3);return n+" réfugiés s’installent à Kawashiro. Ils remercient leur nouveau seigneur à genoux."}},
+   {l:"Accueillir seulement ceux qui ont un métier ("+(h*2)+" balles)",h:"Moins de bouches à nourrir, mais on te trouvera dur.",ok:function(){return S.riz>=h*2},fx:function(e){ch("riz",-h*2);S.lieux[e.k].pop=Math.max(20,S.lieux[e.k].pop-h);CAUSE="Réfugiés";ch("pop",h);rel(e.k,2);if(LIEUX_DEF[e.k].prov===2)rel("omiya",-2);return h+" artisans et paysans solides s’installent. Les autres reprennent la route."}},
+   {l:"Les renvoyer",h:"Personne ne t’en voudra… à part eux.",fx:function(e){hon(-1);rel(e.k,-4);return "Les réfugiés repartent sur la route, tête basse."}}
+  ]}},
+ foire_kawa:{cool:0,title:"La foire de Kawashiro",who:"Ihei, le marchand",
+  text:function(){return "« Seigneur, les marchands des deux provinces sont là ! Pendant trois jours, ils achètent tout au prix des grandes villes. »"},
+  choices:function(){var v=0,sold={};for(var g in S.biens){var q=Math.floor(fl(S.biens[g])/2);if(q>0){sold[g]=q;v+=q*basePrice(g)*1.35}}v=Math.round(v);return [
+   {l:"Vendre la moitié de tes marchandises ("+v+" mon)",ok:function(){return v>0},fx:function(){for(var g in sold)S.biens[g]-=sold[g];ch("mon",v);ch("cont",3);return "Les marchands repartent les bras chargés. Le village a fait la fête trois jours durant."}},
+   {l:"Seulement profiter de la fête",fx:function(){ch("cont",4);S.lastFete=mIdx();return "Lanternes, musique et marchands : le village s’amuse."}}
+  ]}},
+ contribution:{title:"Le seigneur réclame une contribution",who:"Un intendant du château d’Ōtsuki",cond:function(){return S.mon>=900&&chance(.5)},cool:1,
+  text:function(){return "« Le seigneur Ōtsuki prépare la guerre contre Sagara. Il sait que Kawashiro prospère, et il attend de ses vassaux les plus riches une contribution digne de leur fortune. »"},
+  choices:function(){var a=Math.round(S.mon*.25/10)*10,b=Math.round(S.mon*.1/10)*10;return [
+   {l:"Verser une contribution généreuse ("+a+" mon)",h:"Le seigneur s’en souviendra.",fx:function(){ch("mon",-a);ch("faveur",10);hon(1);return "L’intendant compte les pièces avec un large sourire."}},
+   {l:"Verser le minimum ("+b+" mon)",h:"Le seigneur trouvera ça un peu maigre.",fx:function(){ch("mon",-b);ch("faveur",-3);return "L’intendant note la somme sans un mot."}},
+   {l:"Plaider la pauvreté et ne rien donner",h:"Personne ne te croira.",fx:function(){ch("faveur",-15);hon(-2);return "L’intendant regarde longuement tes nouveaux bâtiments avant de repartir."}}
+  ]}},
  marche_armee:{cool:0,title:function(e){return {seki:"Le poste de Kiyomi barre la route",embuscade:"Une embuscade en chemin",pluie:"Des pluies diluviennes",deserteurs:"Des soldats désertent"}[e.t]},who:function(){var g=S.campagne&&samBy(S.campagne.gen);return g?g.nom+", ton général":"Ton armée en marche"},
   text:function(e){var c=S.campagne;if(!c)return "L’armée est rentrée.";return {seki:"Le capitaine Murata refuse de laisser passer ton armée vers la province de Mikumo. « Quarante mon, ou faites demi-tour. »",embuscade:"Des hommes armés tiennent un défilé sur ta route. Ils semblent peu nombreux, mais bien placés.",pluie:"La pluie tombe sans arrêt depuis deux jours. Les chemins sont des rivières de boue.",deserteurs:"Une nuit, des soldats parlent de rentrer chez eux. Ils pensent à leurs champs et à leurs familles."}[e.t]},
   choices:function(e){var c=S.campagne;if(!c)return [{l:"Bien",fx:function(){return ""}}];
@@ -1424,12 +1608,12 @@ function worldMonthly(prev){
  });
  ks.forEach(function(k){
   var L=S.lieux[k],D=LIEUX_DEF[k];
-  if(L.riz<0){L.riz=0;var lost=Math.max(1,Math.round(L.pop*.02));L.pop=Math.max(Math.round(D.pop*.3),L.pop-lost);if(!L.famine){L.famine=1;news("La famine frappe "+D.nom+".",k);if(L.rel>=-10&&!hasPending("v_aide")&&chance(.6))pushEvent("v_aide",{k:k})}}
+  if(L.riz<0){L.riz=0;var lost=Math.max(1,Math.round(L.pop*.02));L.pop=Math.max(Math.round(D.pop*.3),L.pop-lost);if(!L.famine){L.famine=1;news("La famine frappe "+D.nom+".",k);refuge(k);if(L.rel>=-10&&!hasPending("v_aide")&&chance(.6))pushEvent("v_aide",{k:k})}}
   else{if(L.famine&&lieuMonths(k)>2){L.famine=0;news(D.nom+" sort de la famine.",k)}if(lieuMonths(k)>4&&L.pop<D.pop*1.6)L.pop+=Math.max(0,Math.round(L.pop*.0015+(Math.random()<.35?1:0)))}
   if(L.mon>L.pop*2)L.mon-=Math.round((L.mon-L.pop*2)*.12);
   if(lieuMonths(k)>12)L.riz-=Math.round((L.riz-lieuNeed(k)*12)*.04);
   var tgt=Math.round(L.pop*D.force/D.pop);if(L.force<tgt)L.force=Math.min(tgt,L.force+Math.max(1,Math.round(tgt*.03)));else if(L.force>tgt*1.2)L.force--;
-  if(chance(.015)){var ev=pick(["fete","epidemie","incendie"]);if(ev==="fete"){L.mon=Math.max(0,L.mon-L.pop*.1);news(D.nom+" célèbre une grande fête.",k)}else if(ev==="epidemie"){L.pop=Math.round(L.pop*.95);news("Une épidémie frappe "+D.nom+".",k)}else{L.riz=Math.round(L.riz*.8);news("Un incendie ravage des greniers à "+D.nom+".",k)}}
+  if(chance(.015)){var ev=pick(["fete","epidemie","incendie"]);if(ev==="fete"){L.mon=Math.max(0,L.mon-L.pop*.1);news(D.nom+" célèbre une grande fête.",k)}else if(ev==="epidemie"){L.pop=Math.round(L.pop*.95);news("Une épidémie frappe "+D.nom+".",k);refuge(k)}else{L.riz=Math.round(L.riz*.8);news("Un incendie ravage des greniers à "+D.nom+".",k)}}
  });
  // raids
  ks.forEach(function(a){
@@ -1441,14 +1625,15 @@ function worldMonthly(prev){
 }
 function raid(a,t){
  var A=S.lieux[a],T=S.lieux[t],DA=LIEUX_DEF[a],DT=LIEUX_DEF[t];
- if(T.gouv){var g=S.gov[t];if(!g)return;var defF=Math.round(g.pop*.08);if(A.force*(.8+Math.random()*.4)>defF){g.pop=Math.round(g.pop*.97);g.loy=clamp(g.loy-6,0,100);news(DA.nom+" a pillé "+DT.nom+", ton village.",t);pushEvent("rapport",{title:DT.nom+" pillé",who:"Un messager de "+DT.nom,msg:"Les hommes de "+DA.chef+" ont attaqué "+DT.nom+", qui fait partie de ton domaine. Les habitants reprochent à leur seigneur de ne pas les avoir protégés."});rel(a,-10)}else{A.force=Math.round(A.force*.85);news(DT.nom+", ton village, a repoussé une attaque de "+DA.nom+".",t)}return}
- if(A.force*(.8+Math.random()*.4)>T.force){var r=Math.round(T.riz*.25),m=Math.round(T.mon*.15);T.riz-=r;T.mon-=m;A.riz+=r;A.mon+=m;T.pop=Math.round(T.pop*.98);T.force=Math.round(T.force*.85);A.force=Math.round(A.force*.95);news(DA.nom+" a pillé "+DT.nom+" et emporté "+r+" balles de riz.",t);if(T.rel>=15&&!hasPending("v_pillage")&&chance(.6))pushEvent("v_pillage",{a:a,t:t})}
+ if(T.gouv){var g=S.gov[t];if(!g)return;var defF=Math.round(g.pop*.08*(1+.5*gamL(g,"palis"))+(g.gar||0)*ashiVal());if(A.force*(.8+Math.random()*.4)>defF){g.pop=Math.round(g.pop*.97);g.loy=clamp(g.loy-6,0,100);news(DA.nom+" a pillé "+DT.nom+", ton village.",t);pushEvent("rapport",{title:DT.nom+" pillé",who:"Un messager de "+DT.nom,msg:"Les hommes de "+DA.chef+" ont attaqué "+DT.nom+", qui fait partie de ton domaine. Les habitants reprochent à leur seigneur de ne pas les avoir protégés."});rel(a,-10)}else{A.force=Math.round(A.force*.85);news(DT.nom+", ton village, a repoussé une attaque de "+DA.nom+".",t)}return}
+ if(A.force*(.8+Math.random()*.4)>T.force){var r=Math.round(T.riz*.25),m=Math.round(T.mon*.15);T.riz-=r;T.mon-=m;A.riz+=r;A.mon+=m;T.pop=Math.round(T.pop*.98);T.force=Math.round(T.force*.85);A.force=Math.round(A.force*.95);news(DA.nom+" a pillé "+DT.nom+" et emporté "+r+" balles de riz.",t);refuge(t);if(T.rel>=15&&!hasPending("v_pillage")&&chance(.6))pushEvent("v_pillage",{a:a,t:t})}
  else{A.force=Math.round(A.force*.85);news(DT.nom+" a repoussé une attaque de "+DA.nom+".",t)}
 }
 /* =========================================================
    Batailles
    ========================================================= */
 function nomLieu(k){return k==="col"?"le col de Kurotōge":LIEUX_DEF[k].nom}
+function deLieu(k){var n=LIEUX_DEF[k].nom;return k==="col"?"du col de Kurotōge":k==="seki"?"du poste de Kiyomi":(/^[AEIOUÔŌÉ]/i.test(n)?"d’":"de ")+n}
 var ETL={ruse:"rusé : il aime tendre des embuscades",prudent:"prudent : il se retranche et attend qu’on vienne à lui",fier:"fier : il charge toujours le premier",brutal:"brutal : ses hommes frappent fort et sans pitié",sage:"discipliné : ses hommes ne cèdent jamais à la panique"};
 function eT(e){if(e.def)return e.enemy==="bandits"?"brutal":"fier";return LIEUX_DEF[e.cible].et||"prudent"}
 function startAttack(c){
@@ -1462,6 +1647,7 @@ function startAttack(c){
 function raiseAlert(nom,p,who){if(S.alertes.some(function(a){return a.who===who}))return;S.alertes.push({nom:nom,enemyP:p,who:who,at:idx()+1});pushEvent("alerte",{nom:nom,who:who})}
 function startDefense(enemyName,enemyP,who){
  if(hasPending("bataille"))return;
+ if(gpL("enceinte")>=3)enemyP=Math.round(enemyP*.7);
  pushEvent("bataille",{def:true,enemy:who,nom:enemyName,enemyP:enemyP,ph:0,mod:1,cas:who==="bandits"?1.25:1,story:[],sum:{dead:0,hurt:[],killed:[]},
   intro:(who==="bandits"?"Une troupe de bandits descend du col en pleine nuit, torches à la main.":(who==="sagara"?"Les troupes du seigneur Sagara franchissent le col, bannières déployées.":"Les hommes d’Hiraoka franchissent le col, bannières déployées."))+" Ta défense au village : force "+homePower()+"."});
 }
@@ -1469,7 +1655,7 @@ function battleMyP(e){return e.def?homePower():campPower(S.campagne)}
 function armySams(e){var ids=e.def?homeSam().map(function(s){return s.id}):S.campagne.sam;return ids.map(samBy).filter(function(s){return s&&!s.blesse})}
 function armyHas(e,trait){return armySams(e).some(function(s){return visTraits(s).some(function(t){return TR[t].l===trait})})}
 function armyGen(e){if(!e.def&&S.campagne&&S.campagne.gen){var g=samBy(S.campagne.gen);if(g&&!g.blesse)return g}var ss=armySams(e);return ss.sort(function(a,b){return b.cmd-a.cmd})[0]||null}
-function armyMods(e){var ss=armySams(e),m=1,cmd=0,g=armyGen(e);if(g)cmd=g.cmd+(has(g,"veteran")?1:0);ss.forEach(function(s){if(has(s,"brise"))m*=.93;if(has(s,"heros"))m*=1.06;if(has(s,"traitre")&&e.def)m*=.88});return m*(1+cmd*.03)}
+function armyMods(e){var ss=armySams(e),m=gpL("academie")>=3?1.08:1,cmd=0,g=armyGen(e);if(g)cmd=g.cmd+(has(g,"veteran")?1:0);ss.forEach(function(s){if(has(s,"brise"))m*=.93;if(has(s,"heros"))m*=1.06;if(has(s,"traitre")&&e.def)m*=.88});return m*(1+cmd*.03)}
 function resolveBattle(e){
  var ss0=armySams(e);ss0.forEach(function(s){if(has(s,"temeraire"))e.cas*=1.1;if(has(s,"prudent"))e.cas*=.85});
  var my=battleMyP(e)*e.mod*armyMods(e),R=my/e.enemyP*(.85+Math.random()*.3);
@@ -1478,6 +1664,8 @@ function resolveBattle(e){
  var rate=(e.win?.06:.22)*e.cas*(e.win?clamp(1/R+.3,.4,1.3):1);
  var dead=Math.min(sold,Math.round(sold*rate));
  if(e.sum)e.sum.dead+=dead;
+ var ash=e.def?ashiHome():(S.campagne.ashi||0),deadA=Math.min(ash,Math.round(ash*rate*.7));
+ if(deadA){S.ashi-=deadA;if(!e.def)S.campagne.ashi-=deadA;fixGar();if(e.sum)e.sum.dead+=deadA}
  if(dead){if(!e.def)S.campagne.soldats-=dead;killSoldiers(dead);S.flags.morts=(S.flags.morts||0)+dead;ch("cont",-Math.ceil(dead/2),true)}
  var ids=e.def?homeSam().map(function(s){return s.id}):S.campagne.sam.slice();
  var hurt=[],killed=[];
@@ -1573,7 +1761,7 @@ function nextOrEnd(e,t){
    Missions : messagers, espions, caravanes
    ========================================================= */
 function missionTo(id){return S.missions.some(function(m){return m.cible===id})}
-function travel(cible,type){var d=LIEUX_DEF[cible].dist;if(type==="caravane")return S.chevaux>=2?Math.max(1,Math.ceil(d*.6)):d;return S.chevaux>=1?Math.max(1,Math.ceil(d/2)):d}
+function travel(cible,type){var d=LIEUX_DEF[cible].dist;if(type!=="espion"&&((LIEUX_DEF[cible].prov===1&&gpL("route")>=2)||((cible==="ishiba"||cible==="hamana")&&gpL("port")>=2)))d=Math.max(1,d-1);if(type==="caravane")return S.chevaux>=2?Math.max(1,Math.ceil(d*.6)):d;return S.chevaux>=1?Math.max(1,Math.ceil(d/2)):d}
 function sendMission(type,cible,kind,data){var t=travel(cible,type);S.missions.push({type:type,cible:cible,kind:kind,data:data||{},start:idx(),retour:idx()+t*2})}
 function processMissions(){
  var keep=[];
@@ -1581,7 +1769,7 @@ function processMissions(){
   if(idx()<m.retour){keep.push(m);return}
   var D=LIEUX_DEF[m.cible],L=S.lieux[m.cible],msg="",who="Ton messager, de retour de "+D.nom;
   if(m.type==="espion"){
-   who="Ton espion, de retour de "+(m.cible==="col"?"du col":D.nom);
+   who="Ton espion, de retour "+deLieu(m.cible);
    if(L.rel<-20&&m.cible!=="col"&&chance(.25)){rel(m.cible,-10);msg="Ton espion a été démasqué à "+D.nom+" et chassé à coups de bâton. Les relations se dégradent."}
    else{L.connu=idx();msg=m.cible==="col"?"Les bandits sont une trentaine, avec environ "+lieuForce("col")+" de force.":D.nom+" aligne environ "+L.force+" de force. "+(L.rel<-30?"On y parle de toi avec colère.":L.rel>30?"On y parle de toi avec respect.":"On s’y méfie de toi, sans plus.")}
   }else if(m.type==="caravane"){
@@ -1617,7 +1805,7 @@ function processMissions(){
 /* =========================================================
    Campagnes militaires
    ========================================================= */
-function campCons(c){return .5*c.sam.length+.1*c.soldats}
+function campCons(c){return .5*c.sam.length+.1*(c.soldats+(c.ashi||0))}
 function processCampaign(){
  var c=S.campagne;if(!c)return;CAUSE="Guerre";
  if(c.phase!=="bataille"){c.vivres-=campCons(c);if(c.vivres<0){c.vivres=0;c.moral=Math.max(10,c.moral-(hasN("aime")?8:15));if(!c.faim){c.faim=1;log("L’armée n’a plus de vivres.")}}}
@@ -1652,16 +1840,18 @@ function monthly(prev){
  if(S.prod.poterie&&t.poterie)S.biens.poterie+=t.poterie*.7*PX*wm("poterie");
  if(S.prod.forge&&t.forge){var nf=Math.min(Math.round(t.forge*wm("forge")),fl(S.biens.fer),fl(S.biens.charbon));S.biens.fer-=nf;S.biens.charbon-=nf;S.biens.armes+=nf*(hasArt("forgeron")?1.5:1)*PX}
  CAUSE="Pêche et chasse";
- if(S.prod.pecherie&&t.peche&&!(prev===12||prev<=2)){var c=t.peche*.7*wm("pecherie"),half=c*.5;ch("famille",half,true);var dry=Math.min(half,S.biens.sel*4);S.biens.sel-=dry/4;S.biens.poisson+=dry;if(half-dry>1&&!S.flags.pourri){S.flags.pourri=1;pushEvent("rapport",{title:"Du poisson perdu",who:"Les pêcheurs",msg:"Sans sel pour le conserver, une partie du poisson a pourri. Le sel s’achète au marché, à Tsuruga ou à Ishiba."})}}
+ if(S.prod.pecherie&&t.peche&&!(prev===12||prev<=2)){var c=t.peche*.7*wm("pecherie")*(gpL("port")>=3?1.3:1),half=c*.5;ch("famille",half,true);var dry=Math.min(half,S.biens.sel*4);S.biens.sel-=dry/4;S.biens.poisson+=dry;if(half-dry>1&&!S.flags.pourri){S.flags.pourri=1;pushEvent("rapport",{title:"Du poisson perdu",who:"Les pêcheurs",msg:"Sans sel pour le conserver, une partie du poisson a pourri. Le sel s’achète au marché, à Tsuruga ou à Ishiba."})}}
  if(t.chasse&&isWinter(prev)){S.biens.peaux+=t.chasse*.4;ch("famille",t.chasse*.3,true);if(chance(t.chasse*.012)){ch("pop",-1,true);log("Un chasseur n’est pas revenu de la montagne.")}}
  // dépenses
  CAUSE="Maison, samouraïs et soldats";
  var exp=monthlyExpense();
+ var gcap=grenierCap();if(S.riz>gcap){CAUSE="Riz gâté (grenier plein)";ch("riz",-(S.riz-gcap)*.05*(S.biens.poterie>=10?.5:1),true);CAUSE="Maison, samouraïs et soldats"}
  if(S.riz<exp&&S.biens.poisson>0){var fneed=(exp-S.riz)/.8,fu=Math.min(S.biens.poisson,fneed);S.biens.poisson-=fu;exp-=fu*.8;if(fu>=1)log("Ta maisonnée mange "+Math.round(fu)+" poissons séchés faute de riz.")}
  exp=Math.max(0,Math.round(exp*10)/10);
  if(S.riz>=exp-.01)ch("riz",-Math.min(S.riz,exp));else{ch("riz",-S.riz);CAUSE="Grenier vide";ch("cont",-5,true);S.sam.forEach(function(s){s.loy=clamp(s.loy-5,0,100)});if(!hasPending("rapport"))pushEvent("rapport",{title:"Le grenier est vide",who:"Tsuchiya Genba",msg:"Il n’y a plus de riz pour nourrir ta maison et tes hommes. Les samouraïs mangent une ration de misère. Achète du riz au marché, ou réduis tes dépenses."})}
  CAUSE="Rats";var rats=(hasN("greniers")?0:[.02,.01,0][S.niv.grenier-1])*(S.biens.poterie>=10?.5:1);if(rats&&S.riz>0)ch("riz",-Math.round(S.riz*rats),true);
  CAUSE="Nourriture des familles";ch("famille",-famConso(),true);
+ if(S.famille>famConso()*10){CAUSE="Riz gâté chez les familles";ch("famille",-(S.famille-famConso()*10)*.06,true)}
  if(S.famille<1&&S.biens.poisson>0){var need2=(1-S.famille)/.8,fu2=Math.min(S.biens.poisson,need2+famConso()/.8*.5);S.biens.poisson-=fu2;CAUSE="Poisson séché";ch("famille",fu2*.8,true)}
  var hiver=prev===12||prev===1||prev===2;
  if(hiver){
@@ -1672,29 +1862,35 @@ function monthly(prev){
  }
  var famine=S.famille<=0;
  // contentement
- CAUSE="Impôt";var tc=TAX[S.impot].c;if(tc<0&&hasN("bienveillance"))tc=Math.round(tc/2);ch("cont",tc,true);
- CAUSE="Soldats levés";ch("cont",-Math.floor(levesK()/6),true);
+ consumeNeeds();
+ var eqv=contEq().v,dlt=(eqv-S.cont)*.15;if(Math.abs(dlt)<1&&Math.abs(eqv-S.cont)>=2)dlt=dlt>0?1:-1;CAUSE="Niveau de vie";ch("cont",Math.round(dlt),true);
  if(famine){CAUSE="Famine";ch("cont",hasN("bienveillance")?-4:-8,true);S.flags.famineYear=S.an}
- if(S.prod.grandtemple){CAUSE="Grand temple";ch("cont",1,true)}
- if(S.niv.temple>=3){CAUSE="Pagode";ch("cont",1,true)}
- if(S.prod.ecole&&S.mois%2===0){CAUSE="École du temple";ch("cont",1,true)}
- if(S.cont>72){CAUSE="Habitude du confort";ch("cont",-1,true)}
+ if(S.honneur>80)hon(S.honneur>95?-2:-1);
  CAUSE="Nouvelles familles";
- if(S.cont>=65&&!famine&&S.menace<60&&S.pop<S.logement)ch("pop",Math.min(rnd(1,3),S.logement-S.pop));
+ if(S.cont>=55&&!famine&&S.menace<60&&S.pop<S.logement){var gr=rnd(1,3)+Math.round(S.pop*(S.famille>famConso()*6?.005:.0035)*(S.cont>=75?1:.6)*(S.flags.faste>mIdx()?1.5:1));ch("pop",Math.min(gr,S.logement-S.pop))}
+ if(S.an<=3&&!famine&&S.pop<S.logement){CAUSE="Terres neuves";ch("pop",1,true)}
+ var atr=attract();if(atr>=60&&!famine&&S.logement-S.pop>=3&&chance((atr-55)/60)){var srcs=LIEUX_ORDER.filter(function(k){var L=S.lieux[k];return WD[k]&&!L.gouv&&L.pop>LIEUX_DEF[k].pop*.7});if(srcs.length){var src=pick(srcs),an=Math.min(rnd(2,4)+Math.round(S.pop*.004),S.logement-S.pop);S.lieux[src].pop-=an;CAUSE="Attirés par Kawashiro";ch("pop",an,true);if(an>=4)log(an+" habitants "+deLieu(src)+" viennent s’installer à Kawashiro.")}}
  CAUSE=famine?"Famine":"Départs";
  if(S.cont<=30||famine){var gone=rnd(2,5);ch("pop",-gone);log(gone+" habitants ont quitté le village"+(famine?", chassés par la faim.":"."))}
  fixTasks();
  // argent
  CAUSE="Taxes du marché";ch("mon",marketIncome());
+ if(gpL("route")>=3){CAUSE="Marchands de la route";ch("mon",Math.round(S.pop*.05),true)}
+ if(gpL("pelerinage")>=2){CAUSE="Pèlerins";ch("mon",Math.round(S.pop*.06),true)}
+ if(gpL("port")>=3){S.biens.poisson+=Math.round(S.pop/50);S.biens.sel+=Math.round(S.pop/100)}
+ if(gpL("academie")>=2)homeSam().forEach(function(x){if(x.force<10&&chance(.12))x.force++});
+ if(S.ashi){var sol=Math.round(S.ashi*ashiCost());if(S.mon>=sol){CAUSE="Solde des ashigaru";ch("mon",-sol,true);S.ashiUnpaid=0}else{S.ashiUnpaid=(S.ashiUnpaid||0)+1;if(S.ashiUnpaid>=2){var aq=Math.min(S.ashi,Math.ceil(S.ashi/20)*10);S.ashi-=aq;fixGar();S.ashiUnpaid=0;CAUSE="Désertion des ashigaru";ch("riz",-Math.min(S.riz,aq*.5),true);pushEvent("rapport",{title:"Les ashigaru désertent",who:"Ton capitaine",msg:aq+" ashigaru impayés depuis deux mois ont quitté Kawashiro. En partant, certains ont pillé le grenier."})}else log("Les ashigaru n’ont pas été payés ce mois-ci. Ils grondent.")}}
+ if(gpL("halle")>=3&&S.mois===10&&!hasPending("foire_kawa"))pushEvent("foire_kawa");
+ var nbB=Object.keys(S.prod).filter(function(k){return S.prod[k]===true}).length;CAUSE="Entretien du village";ch("mon",-Math.round(Math.max(0,S.pop-150)*.08+nbB*2+Object.keys(S.gov).length*4),true);
  CAUSE="Traités de commerce";ch("mon",treatyIncome());
- if(S.prod.auberge){CAUSE="Auberge";var nt=LIEUX_ORDER.filter(function(k){return S.lieux[k].commerce}).length;ch("mon",8+3*nt);if(chance(.3)){var lk=pick(["kamino","ishiba","hiraoka","col"]);S.lieux[lk].connu=idx();log("À l’auberge, des voyageurs parlent de "+nomLieu(lk)+" : tu connais maintenant sa force.")}}
+ if(S.prod.auberge){CAUSE="Auberge";var nt=LIEUX_ORDER.filter(function(k){return S.lieux[k].commerce}).length;ch("mon",8+3*nt);if(chance(.3)){var lk=pick(["kamino","ishiba","hiraoka","col"]);S.lieux[lk].connu=idx();log("À l’auberge, des voyageurs parlent "+deLieu(lk)+" : tu connais maintenant sa force.")}}
  CAUSE=null;
  // menaces
  var porte=[0,2,3][S.niv.porte-1];
- S.menace=clamp(S.menace+rnd(2,5)-porte-Math.floor(S.taches.garde/5)-(hasN("peur")?1:0)-(S.prod.remparts?1:0),0,100);
+ S.menace=clamp(S.menace+rnd(2,5)+(S.mon>1500?1:0)+Math.floor(S.pop/350)-porte-Math.floor(S.taches.garde/5)-(hasN("peur")?1:0)-(S.prod.remparts?1:0),0,100);
  if(S.niv.residence>=2){if(S.mois%2===0)S.faveur=clamp(S.faveur-1,0,100)}else S.faveur=clamp(S.faveur-1,0,100);
  worldMonthly(prev);
- Object.keys(S.pm).forEach(function(k){S.pm[k]=clamp(1+(S.pm[k]-1)*.8+(Math.random()-.5)*.06,.55,1.7)});
+ Object.keys(S.pm).forEach(function(k){S.pm[k]=clamp(1+(S.pm[k]-1)*.85+(Math.random()-.5)*.06,.3,1.7)});
  // printemps
  if(S.mois===3){
   var r2=Math.random();S.meteo=r2<.45?"normale":r2<.65?"seche":r2<.85?"pluvieuse":"froide";S.meteoPred=null;
@@ -1714,7 +1910,7 @@ function monthly(prev){
  else if(F.adulte&&!F.epouse&&F.age>=16&&!(F.awayUntil>idx())&&!hasPending("mariage_fils")&&(F.attente||0)<=S.an-1&&chance(.5))pushEvent("mariage_fils");
  if(F.role==="seigneur"&&F.awayUntil&&F.awayUntil<=idx()&&!F.revenu){F.revenu=1;F.sabre=Math.min(10,F.sabre+2);F.gestion=Math.min(10,F.gestion+1);F.role="samourai";S.sam.push(normSam({id:"fils",nom:fN(1),traits:["loyal","veteran"],desc:"Ton héritier, revenu du service du seigneur.",force:clamp(3+Math.round(F.sabre/2),1,10),cmd:clamp(2+Math.round(F.gestion/2),1,10),ges:clamp(F.gestion,1,10),age:F.age,loy:100,blesse:0}));pushEvent("rapport",{title:"Le retour de ton fils",who:"La porte du village",msg:"Ton fils revient du service du seigneur Ōtsuki, plus fort et plus sûr de lui. Il rejoint tes samouraïs."})}
  // commandes et recrues
- if(S.commandes.length<3&&!hasPending("commande")&&chance(.3)){var o=makeCommande();if(o)pushEvent("commande",{c:o})}
+ if(S.commandes.length<3&&!hasPending("commande")&&chance(gpL("route")>=3?.45:.3)){var o=makeCommande();if(o)pushEvent("commande",{c:o})}
  var sk=S.an+"-"+season();if(S.recrueSaison!==sk){S.recrueSaison=sk;S.recrue=makeRecrue()}
  // Hiraoka, bandits, plaintes
  var H=S.lieux.hiraoka;
@@ -1723,9 +1919,10 @@ function monthly(prev){
  }
  if(S.flags.promesseFete&&S.an*100+S.mois>S.flags.promesseFete){S.flags.promesseFete=0;ch("cont",-8);hon(-3);pushEvent("rapport",{title:"Une promesse oubliée",who:"Yohei, chef des paysans",msg:"Tu avais promis une fête au village. Elle n’a jamais eu lieu, et tout le monde s’en souvient."})}
  var O=S.lieux.omiya;
- if(O&&!O.allie&&!O.soumis&&O.rel<=-50&&S.an>=2&&!hasPending("bataille")&&!S.alertes.some(function(a){return a.who==="sagara"})&&chance(.06)&&O.force*.5>homePower()*.7)raiseAlert("les troupes de Sagara",Math.round(O.force*.5*(.9+Math.random()*.2)),"sagara");
- if(O&&O.rel<=-30&&!hasPending("sagara_reprise")&&chance(.05)){var rk=Object.keys(S.gov).filter(function(k){return CAMP[k]==="rival"&&k!=="omiya"});if(rk.length)pushEvent("sagara_reprise",{k:pick(rk)})}
- if(S.menace>=80&&!hasPending("bataille")&&!S.alertes.some(function(a){return a.who==="bandits"}))raiseAlert("les bandits",banditPower(),"bandits");
+ if(O&&!O.allie&&!O.commerce&&!O.soumis&&S.an>=4&&gpL("enceinte")<3&&chance(.5))O.rel=Math.max(-100,O.rel-1);
+ if(O&&!O.allie&&!O.soumis&&O.rel<=-40&&S.an>=3&&!hasPending("bataille")&&!S.alertes.some(function(a){return a.who==="sagara"})&&chance(.06)&&O.force*.5>homePower()*.7)raiseAlert("les troupes de Sagara",Math.round(O.force*.5*(.9+Math.random()*.2)),"sagara");
+ if(O&&O.rel<=-30&&!hasPending("sagara_reprise")&&chance(.05)){var rk=Object.keys(S.gov).filter(function(k){var gx=S.gov[k];return CAMP[k]==="rival"&&k!=="omiya"&&gamL(gx,"palis")<3&&(gx.gar||0)<20});if(rk.length)pushEvent("sagara_reprise",{k:pick(rk)})}
+ if(S.menace>=80&&gpL("enceinte")<2&&!hasPending("bataille")&&!S.alertes.some(function(a){return a.who==="bandits"}))raiseAlert("les bandits",banditPower(),"bandits");
  if(S.cont<=30&&mIdx()-S.lastPlainte>=3&&!hasPending("plainte")&&(!hasN("ferme")||chance(.5))){pushEvent("plainte");S.lastPlainte=mIdx()}
  if(S.sam.some(function(s){return s.loy<=20&&!isAway(s)})&&!hasPending("trahison")&&chance(hasN("ferme")?.3:.6))pushEvent("trahison");
  monthly4(prev);
@@ -1737,12 +1934,13 @@ function harvest(){
  var tot=0;S.zones.forEach(function(z){tot+=zoneYield(z)});
  var cov=coverage();
  var total=Math.round(tot*cov*(S.niv.chef>=2?1.05:1)*(hasN("fertile")?1.1:1)*(.92+Math.random()*.16));
+ var tn=0;S.zones.forEach(function(z){tn+=zoneYield(z,"normale")});var expH=tn*cov*(S.niv.chef>=2?1.05:1)*(hasN("fertile")?1.1:1);var faste=total>=expH*1.2;if(faste){S.flags.faste=mIdx()+12;log("Une récolte magnifique : une année de mariages commence.")}
  if(total>S.bestHarvest&&S.bestHarvest>0)gainMerit(1,"une récolte record");S.bestHarvest=Math.max(S.bestHarvest,total);
  var taxed=Math.round(total*TAX[S.impot].r),trib=Math.round(taxed*(S.tributReduit?.2:.3)),fam=total-taxed;
  CAUSE="Récolte : impôt";ch("riz",taxed);CAUSE="Tribut au seigneur";ch("riz",-trib);CAUSE="Récolte : part des familles";ch("famille",fam);CAUSE="Tributs reçus";
  var vass=0;LIEUX_ORDER.forEach(function(k){if(S.lieux[k].soumis){var v=Math.round(LIEUX_DEF[k].pop*.12);vass+=v}});
  if(vass)ch("riz",vass);
- var msg=METEO[S.meteo].l+". Les rizières ont donné "+total+" balles de riz"+(cov<.97?" (les champs ont manqué de bras : "+Math.round(cov*100)+" % du travail a été fait)":"")+". L’impôt ("+TAX[S.impot].pct+") en rapporte "+taxed+" à ton grenier, dont "+trib+" partent en tribut au seigneur Ōtsuki. Les familles gardent "+fam+" balles pour l’année, soit environ "+Math.round(fam/famConso())+" mois de nourriture."+(vass?" Tes villages soumis t’envoient "+vass+" balles.":"");
+ var msg=(faste?"Une récolte magnifique ! Les familles parlent de mariages, le village va grandir plus vite cette année. ":"")+METEO[S.meteo].l+". Les rizières ont donné "+total+" balles de riz"+(cov<.97?" (les champs ont manqué de bras : "+Math.round(cov*100)+" % du travail a été fait)":"")+". L’impôt ("+TAX[S.impot].pct+") en rapporte "+taxed+" à ton grenier, dont "+trib+" partent en tribut au seigneur Ōtsuki. Les familles gardent "+fam+" balles pour l’année, soit environ "+Math.round(fam/famConso())+" mois de nourriture."+(vass?" Tes villages soumis t’envoient "+vass+" balles.":"");
  if(S.dette){if(S.mon>=S.dette){msg+=" Ihei vient réclamer ses "+S.dette+" mon, que tu lui rends.";ch("mon",-S.dette)}else{msg+=" Tu ne peux pas rembourser Ihei : il répand partout que tu es un mauvais payeur.";hon(-8);S.faveur=clamp(S.faveur-10,0,100);S.cont=clamp(S.cont-5,0,100)}S.dette=0}
  pushEvent("rapport",{title:"La récolte",who:"Yohei, chef des paysans",msg:msg});
  CAUSE=null;log("Récolte : "+(taxed-trib)+" balles pour le grenier, "+fam+" pour les familles.");
@@ -1756,7 +1954,7 @@ function advance(){
  var need=fieldNeed();
  if(need>0){var c=Math.min(1,fieldWorkers()/need);S.cov.s+=c*need;S.cov.w+=need}
  fixTasks();
- var ce=constrEff();if(S.chantier&&ce>0){S.chantier.reste-=ce*(hasArt("charpentier")?1.25:1)*(S.mois===12||S.mois<=2?.6:1);CAUSE="Corvées du chantier";if(S.riz>=ce*.05)ch("riz",-ce*.05,true);else ch("cont",-1,true);CAUSE=null;if(S.chantier.reste<=0)finishChantier()}
+ var al=chAlloc(),ce=0;S.chantiers.slice().forEach(function(c){var a=al[c.uid]||0;if(a>0){ce+=a;c.reste-=a*(hasArt("charpentier")?1.25:1)*(S.mois===12||S.mois<=2?.6:1);if(c.reste<=0)finishChantier(c)}});if(ce>0){CAUSE="Corvées du chantier";if(S.riz>=ce*.05)ch("riz",-ce*.05,true);else ch("cont",-1,true);CAUSE=null}
  S.sam.forEach(function(s){if(s.blesse>0){s.blesse=Math.max(0,s.blesse-(S.prod.infirmerie?2:1));if(s.blesse===0)log(s.nom+" est guéri de ses blessures.")}});
  // le temps avance
  var prev=S.mois;S.dec++;
@@ -1771,13 +1969,14 @@ function advance(){
  if(S.pending.length)toast(S.pending.length>1?S.pending.length+" audiences t’attendent à la résidence.":"Une audience t’attend à la résidence.");
 }
 function zoneBy(id){for(var i=0;i<S.zones.length;i++)if(S.zones[i].id===id)return S.zones[i];return null}
-function finishChantier(){
- var c=S.chantier;S.chantier=null;
+function finishChantier(c){
+ S.chantiers=S.chantiers.filter(function(x){return x.uid!==c.uid});
  if(c.type==="upg"){S.niv[c.id]=c.lvl;log("Chantier terminé : "+BLD_LEVELS[c.id][c.lvl-1].toLowerCase()+".");toast("Chantier terminé : "+BLD_LEVELS[c.id][c.lvl-1])}
  else if(c.type==="defr"){var z=zoneBy(c.id);if(z){z.neuf+=c.lot;log(c.lot+" parcelle"+(c.lot>1?"s":"")+" défrichée"+(c.lot>1?"s":"")+" dans "+z.nom+". Elles produiront à partir du printemps.");toast(z.nom+" : "+c.lot+" parcelle"+(c.lot>1?"s":"")+" défrichée"+(c.lot>1?"s":""))}}
  else if(c.type==="zniv"){var z2=zoneBy(c.id);if(z2){z2.niv++;log(z2.nom+" passe au niveau "+z2.niv+".");toast(z2.nom+" : niveau "+z2.niv)}}
  else if(c.type==="zspec"){var z3=zoneBy(c.id);if(z3){z3.spec=1;log(ZSPEC[z3.type][0]+" construits dans "+z3.nom+".");toast(ZSPEC[z3.type][0]+" : "+z3.nom)}}
  else if(c.type==="wlv"){S.wl[c.id]=c.lvl;log(c.label+" terminé.");toast(c.label)}
+ else if(c.type==="gp"){S.gp[c.id]=c.lvl;var gs2=GP[c.id].st[c.lvl-1];log("Grand projet : "+gs2.l.toLowerCase()+" ("+GP[c.id].l+") terminé.");toast(gs2.l+" : terminé");if(c.id==="pelerinage"&&c.lvl===1)hon(3);gainMerit(1,gs2.l.toLowerCase())}
  else{PROJ[c.id].done();log("Chantier terminé : "+PROJ[c.id].l.toLowerCase()+".");toast("Chantier terminé : "+PROJ[c.id].l)}
 }
 function checkOver(){
@@ -1804,6 +2003,8 @@ function renderHud(){
  });
  h+='<button type="button" class="btn ghost reg-btn" data-open="registre">Registre</button>';
  resbar.innerHTML=h;
+ var al=S.over?[]:hudAlerts(),ab=document.getElementById("alertBtn");ab.hidden=!al.length;document.getElementById("alertN").textContent=al.length;ab.title=al.map(function(x){return x[0]}).join("\n");ab.setAttribute("aria-label",al.length+" point"+(al.length>1?"s":"")+" à surveiller");
+ var ap=document.getElementById("alertPop");if(!al.length)ap.hidden=true;else ap.innerHTML='<h4>À surveiller</h4>'+al.map(function(x){return '<button type="button" data-go="'+x[1]+':'+(x[2]||"")+'">'+esc(x[0])+'</button>'}).join("");
  var n=S.pending.length;
  document.querySelectorAll(".badge").forEach(function(b){b.style.opacity=n?1:0;b.querySelector("text").textContent=n});
 }
@@ -1811,8 +2012,27 @@ function toast(t){var w=document.getElementById("toasts");for(var i=0;i<w.childr
 function meter(v,max,inv){var p=clamp(v/max,0,1);var cls=inv?(p>.66?"bad":p>.4?"warn":""):(p<.3?"bad":p<.5?"warn":"");return '<span class="meter '+cls+'"><i style="width:'+Math.round(p*100)+'%"></i></span>'}
 function btn(act,label,disabled,cls){return '<button type="button" class="btn'+(cls?" "+cls:"")+'" data-act="'+act+'"'+(disabled?" disabled":"")+'>'+label+'</button>'}
 function stepper(act,val,canDown,canUp,lab){return '<span class="stepper"><button type="button" data-act="'+act+':-1" aria-label="Moins de '+lab+'"'+(canDown?"":" disabled")+'>−</button><output>'+val+'</output><button type="button" data-act="'+act+':1" aria-label="Plus de '+lab+'"'+(canUp?"":" disabled")+'>+</button></span>'}
+function tile(l,v,sub,cls){return '<div class="tile'+(cls?" "+cls:"")+'"><span class="tl">'+l+'</span><span class="tv">'+v+'</span>'+(sub?'<span class="ts">'+sub+'</span>':"")+'</div>'}
+function tiles(a){return '<div class="tiles">'+a.filter(Boolean).join("")+'</div>'}
+function costChips(c){var a=[],w=woodCost(c);if(c.mon)a.push('<span class="'+(S.mon<c.mon?"short":"")+'"><b>銭</b>'+c.mon+'</span>');if(w)a.push('<span class="'+(S.bois<w?"short":"")+'"><b>木</b>'+w+'</span>');if(c.fer)a.push('<span class="'+(fl(S.biens.fer)<c.fer?"short":"")+'"><b>鉄</b>'+c.fer+'</span>');if(c.work)a.push('<span title="journées de travail"><b>工</b>'+c.work+' j</span>');return '<span class="cost">'+a.join("")+'</span>'}
+var UIO={};
+function fold(k,title,body,def){var o=UIO[k]!==undefined?UIO[k]:!!def;return '<details class="fold" data-k="'+k+'"'+(o?" open":"")+'><summary>'+title+'</summary><div class="fb">'+body+'</div></details>'}
+document.addEventListener("toggle",function(e){var d=e.target;if(d&&d.dataset&&d.dataset.k)UIO[d.dataset.k]=d.open},true);
+function liveNeed(n){if(n.k==='famille')return S.famille>0;if(n.k==='fete')return mIdx()-(S.lastFete||-99)<12;if(n.k==='temple')return !!S.prod.grandtemple||gpL('pelerinage')>=1;if(n.k==='peaux')return !isWinter(S.mois)||S.biens.peaux>=Math.ceil(S.pop/60);return (S.biens[n.g||n.k]||0)>=needQty(n)}
+function pcard(x){return '<div class="pc'+(x.ok||x.busy?"":" dim")+'"><span class="pn">'+esc(x.n)+(x.busy?'<span class="tag">en cours</span>':"")+(x.tag?'<span class="tag">'+x.tag+'</span>':"")+'</span><span class="pa">'+(x.busy?"":btn(x.a,x.bl||"Lancer",!x.ok,"sm"))+'</span><span class="pe">'+esc(x.e)+(x.c?'<br>'+costChips(x.c):"")+'</span></div>'}
+function hudAlerts(){var a=[],e=monthlyExpense(),toH=S.mois<11?11-S.mois:23-S.mois;
+ if(S.riz<e*2)a.push(["Ton grenier sera vide dans moins de deux mois.","grenier"]);
+ if(S.famille<famConso()*Math.min(toH,3))a.push(["La réserve des familles s’épuise.","grenier"]);
+ if(S.alertes&&S.alertes.length)a.push(["Tes guetteurs annoncent une attaque.","dojo"]);
+ if(S.ashiUnpaid)a.push(["Tes ashigaru n’ont pas été payés.","dojo"]);
+ var miss=needList().filter(function(n){return S.needs&&S.needs[n.k]===false&&!needGrace(n)});if(miss.length)a.push([miss.length>1?miss.length+" besoins du village ne sont pas couverts.":"Un besoin du village n’est pas couvert : "+miss[0].l.toLowerCase()+".","chef","village"]);
+ if(S.chantiers.length&&!constrEff())a.push(["Personne ne travaille sur tes chantiers.","chef","travail"]);
+ if(S.riz>grenierCap())a.push(["Ton grenier déborde : du riz se gâte.","grenier"]);
+ if(S.cont<35)a.push(["Le village gronde.","chef","village"]);
+ if(S.faveur<30)a.push(["Le seigneur Ōtsuki est mécontent.","porte","seigneur"]);
+ return a}
 function woodCost(o){return Math.ceil((o.bois||0)*(hasN("travaux")?.7:1))}
-function costTxt(o){var a=[];if(o.mon)a.push(o.mon+" mon");if(o.bois)a.push(woodCost(o)+" bois");return a.join(", ")}
+function costTxt(o){var a=[];if(o.mon)a.push(o.mon+" mon");if(o.bois)a.push(woodCost(o)+" bois");if(o.fer)a.push(o.fer+" fer");return a.join(", ")}
 
 /* =========================================================
    Menus
@@ -1907,19 +2127,19 @@ function renderChronique(){
 }
 function renderGrenier(){
  if(cur.tab==="reserves")return renderReserves();
- var exp=monthlyExpense(),months=exp?Math.floor((S.riz+S.biens.poisson*.8)/exp):99,est=harvestEstimate();
- var toHarvest=S.mois<11?11-S.mois:23-S.mois,famM=Math.floor((S.famille+S.biens.poisson*.8)/famConso());
- var h=lvlLine("grenier");
- h+='<section class="sec"><h3>Ton grenier</h3><div class="row"><span class="big">'+fl(S.riz)+'</span><span>balles de riz</span></div><p class="note" style="margin-top:.5em">Ta maison et tes hommes consomment '+exp+' balles par mois. De quoi tenir environ '+months+' mois'+(S.biens.poisson>=1?", en comptant tes "+fl(S.biens.poisson)+" poissons séchés, mangés si le riz vient à manquer":"")+'.'+(S.niv.grenier<3?" Les rats en mangent un peu chaque mois"+(S.biens.poterie>=10?" (moitié moins grâce à tes jarres de poterie)":"")+".":"")+'</p></section>';
- h+='<section class="sec"><h3>La réserve des familles <small>'+(famM>=toHarvest?"elle tiendra jusqu’à la récolte":"elle ne tiendra pas jusqu’à la récolte")+'</small></h3><div class="row"><span class="big">'+fl(S.famille)+'</span><span>balles, environ '+famM+' mois de nourriture</span></div><p class="note" style="margin-top:.5em">C’est le riz que les paysans gardent pour eux après l’impôt. Si elle s’épuise, les familles mangent ton poisson séché, puis c’est la famine : le contentement s’effondre et des familles s’en vont.</p><div class="row" style="margin-top:6px">'+btn("give:10","Donner 10 balles",S.riz<10)+btn("give:25","Donner 25 balles",S.riz<25)+'</div></section>';
+ var exp=monthlyExpense(),months=exp?Math.floor((S.riz+S.biens.poisson*.8)/exp):99,est=harvestEstimate(),gcp=grenierCap();
+ var toHarvest=S.mois<11?11-S.mois:23-S.mois,famM=Math.floor((S.famille+S.biens.poisson*.8)/famConso()),famOk=famM>=toHarvest;
+ var h=tiles([tile("Ton grenier",fl(S.riz)+"<small> / "+gcp+"</small>",months+" mois de réserve",months<2?"bad":months<4?"warn":S.riz>gcp?"warn":""),tile("Familles",famM+" mois",famOk?"tiendra jusqu’à la récolte":"ne tiendra pas jusqu’à la récolte",famOk?"":famM>=toHarvest-1?"warn":"bad"),tile("Prochaine récolte","~"+est.taxed,"pour toi, dans "+toHarvest+" mois"),tile("Dépenses",exp+"/mois","maison et soldats")]);
+ if(S.riz>gcp)h+='<p class="note"><strong class="short">Le grenier déborde :</strong> chaque mois, une partie du riz en trop se gâte. Améliore le grenier, vends ou transforme ton riz.</p>';
  h+='<section class="sec"><h3>Impôt sur la récolte</h3><div class="choice-set">';
  ["faible","normal","lourd"].forEach(function(k){h+='<button type="button" class="btn ghost" data-act="impot:'+k+'" aria-pressed="'+(S.impot===k)+'">'+TAX[k].label+' ('+TAX[k].pct+')</button>'});
- h+='</div><p class="note" style="margin-top:.5em">'+({faible:"Les familles gardent plus de riz et le contentement monte un peu chaque mois.",normal:"Ce que tout le monde attend. Ni joie ni colère.",lourd:"Ton grenier se remplit, mais les familles gardent moins et le contentement baisse chaque mois."})[S.impot]+'</p></section>';
- h+='<section class="sec"><h3>Prochaine récolte <small>dans '+toHarvest+' mois</small></h3><dl class="kv"><dt>Récolte estimée</dt><dd>environ '+est.total+' balles</dd><dt>Pour ton grenier</dt><dd>'+est.taxed+' balles, moins '+est.trib+' de tribut ('+(S.tributReduit?"20":"30")+' %)</dd><dt>Pour les familles</dt><dd>'+est.fam+' balles</dd><dt>Travail aux champs</dt><dd>'+Math.round(coverage()*100)+' % fait à temps cette année</dd><dt>Météo</dt><dd>'+(S.meteoPred?METEO[S.meteoPred].l+", selon Kōen":"inconnue, demande à Kōen")+'</dd></dl></section>';
- if(S.prod.pecherie)h+='<p class="note">La pêcherie nourrit aussi un peu les familles, hors hiver. Le poisson séché se trouve dans l’onglet Réserves.</p>';
- var hn=Math.ceil(S.pop/15);h+='<section class="sec"><h3>L’hiver <small>du 12e au 2e mois</small></h3><p class="note">Chaque mois d’hiver, les familles brûlent '+hn+' bois pour se chauffer (le charbon compte triple), portent '+Math.ceil(S.pop/60)+' peaux en vêtements chauds, et salent leurs légumes avec '+Math.ceil(S.pop/75)+' sel. Sans chauffage, le contentement baisse et les fièvres se répandent. Les peaux et le sel ne sont pas indispensables, mais aident beaucoup.</p><dl class="kv"><dt>Bois</dt><dd>'+fl(S.bois)+'</dd><dt>Charbon</dt><dd>'+fl(S.biens.charbon)+'</dd><dt>Peaux</dt><dd>'+fl(S.biens.peaux)+'</dd><dt>Sel</dt><dd>'+fl(S.biens.sel)+'</dd></dl></section>';
+ h+='</div><p class="note" style="margin-top:.5em">'+({faible:"Les familles gardent plus de riz : le village est plus content (+8).",normal:"Ce que tout le monde attend. Ni joie ni colère.",lourd:"Ton grenier se remplit, mais les familles gardent moins et le village est mécontent ("+(hasN("bienveillance")?"−6":"−12")+")."})[S.impot]+'</p></section>';
+ h+='<section class="sec"><h3>Aider les familles</h3><div class="row">'+btn("give:10","Donner 10 balles",S.riz<10,"ghost")+btn("give:25","Donner 25 balles",S.riz<25,"ghost")+'</div></section>';
+ h+=fold("gr-recolte","Détail de la prochaine récolte",'<dl class="kv"><dt>Récolte estimée</dt><dd>environ '+est.total+' balles</dd><dt>Pour ton grenier</dt><dd>'+est.taxed+' balles, moins '+est.trib+' de tribut ('+(S.tributReduit?"20":"30")+' %)</dd><dt>Pour les familles</dt><dd>'+est.fam+' balles</dd><dt>Travail aux champs</dt><dd>'+Math.round(coverage()*100)+' % fait à temps cette année</dd><dt>Météo</dt><dd>'+(S.meteoPred?METEO[S.meteoPred].l+", selon Kōen":"inconnue, demande à Kōen")+'</dd></dl>');
+ var hn=Math.ceil(S.pop/15);
+ h+=fold("gr-hiver","L’hiver (du 12e au 2e mois)",'<p class="note">Chaque mois d’hiver, les familles brûlent '+hn+' bois (le charbon compte triple), portent '+Math.ceil(S.pop/60)+' peaux et salent leurs légumes avec '+Math.ceil(S.pop/75)+' sel. Sans chauffage, le contentement baisse et les fièvres se répandent.</p><dl class="kv"><dt>Bois</dt><dd>'+fl(S.bois)+'</dd><dt>Charbon</dt><dd>'+fl(S.biens.charbon)+'</dd><dt>Peaux</dt><dd>'+fl(S.biens.peaux)+'</dd><dt>Sel</dt><dd>'+fl(S.biens.sel)+'</dd></dl>',isWinter(S.mois)||S.mois===11);
  var vass=LIEUX_ORDER.filter(function(k){return S.lieux[k].soumis});
- if(vass.length)h+='<p class="note">Villages qui te versent un tribut : '+vass.map(function(k){return LIEUX_DEF[k].nom}).join(", ")+'.</p>';
+ h+=fold("gr-aide","Comment marche le grenier ?",'<p class="note">Ta maison et tes hommes mangent '+exp+' balles par mois'+(S.biens.poisson>=1?" ; tes "+fl(S.biens.poisson)+" poissons séchés servent de secours":"")+'. '+BLD_LEVELS.grenier[S.niv.grenier-1]+' : '+gcp+' places. Au-delà, le riz se gâte peu à peu.'+(S.niv.grenier<3?" Les rats en mangent un peu chaque mois"+(S.biens.poterie>=10?", moitié moins grâce à tes jarres":"")+".":"")+' La réserve des familles, c’est le riz que les paysans gardent après l’impôt : si elle s’épuise, ils mangent ton poisson séché, puis c’est la famine.'+(S.prod.pecherie?" La pêcherie nourrit aussi un peu les familles, hors hiver.":"")+(vass.length?" Villages qui te versent un tribut : "+vass.map(function(k){return LIEUX_DEF[k].nom}).join(", ")+".":"")+'</p>');
  return h;
 }
 function renderReserves(){
@@ -1937,8 +2157,9 @@ function renderReserves(){
 }
 function traitTags(s){var v=visTraits(s),hid=(s.traits||[]).some(function(t){return TR[t]&&TR[t].hidden&&!s.rev});return '<div class="row" style="gap:4px;margin:2px 0 4px">'+v.map(function(t){return '<span class="tag" title="'+esc(TR[t].d)+'">'+TR[t].l+'</span>'}).join("")+(hid?'<span class="tag" title="Quelque chose chez lui t’échappe encore.">?</span>':"")+'</div><p class="note" style="margin:0 0 4px">'+v.map(function(t){return TR[t].l+" : "+TR[t].d.charAt(0).toLowerCase()+TR[t].d.slice(1)}).join(" ")+'</p>'}
 function renderDojo(){
- var h=lvlLine("dojo");
- h+='<section class="sec"><h3>Défense du village</h3><div class="row"><span class="big">'+homePower()+'</span><span class="note">Samouraïs présents, soldats levés et gardes. Équipement : '+EQUIP[S.equip].toLowerCase()+'.'+(S.chevaux?' Chevaux : '+S.chevaux+'.':"")+' Les bandits du col valent environ '+(8+Math.round(S.menace*.22))+' à '+(16+Math.round(S.menace*.22))+'.</span></div>'+(S.campagne?'<p class="note" style="margin-top:.4em">En campagne : force '+Math.round(campPower(S.campagne))+'.</p>':"")+'</section>';
+ var hp=homePower(),bmin=8+Math.round(S.menace*.22),bmax=16+Math.round(S.menace*.22);
+ var h=tiles([tile("Défense",hp,"les bandits valent "+bmin+" à "+bmax,hp<bmin?"bad":hp<bmax?"warn":"good"),tile("Samouraïs",homeSam().length+" / "+S.sam.length,"présents au village"),tile("Soldats levés",S.leves,"paysans armés"),tile("Ashigaru",S.ashi||0,(S.ashi?ashiHome()+" au village":"soldats de métier")),S.campagne?tile("En campagne",Math.round(campPower(S.campagne)),"de force","warn"):null]);
+ h+='<p class="note" style="margin:-6px 0 14px">'+BLD_LEVELS.dojo[S.niv.dojo-1]+'. Équipement : '+EQUIP[S.equip].toLowerCase()+'.'+(S.chevaux?' Chevaux : '+S.chevaux+'.':"")+'</p>';
  h+='<section class="sec"><h3>Samouraïs <small>2 balles de riz par mois chacun</small></h3>';
  if(!S.sam.length)h+='<p class="empty">Plus aucun samouraï ne te sert.</p>';
  S.sam.forEach(function(s){
@@ -1952,26 +2173,32 @@ function renderDojo(){
  var maxL=maxLev(),inCamp=S.campagne?S.campagne.soldats:0,ls=levStep();
  var crit=(S.mois>=4&&S.mois<=5)||(S.mois>=9&&S.mois<=10);
  h+='<section class="sec"><h3>Soldats levés <small>des paysans armés</small></h3><div class="row"><span class="stepper"><button type="button" data-act="lev:-1" aria-label="Moins"'+(S.leves-ls<inCamp?" disabled":"")+'>−</button><output>'+S.leves+'</output><button type="button" data-act="lev:1" aria-label="Plus"'+(S.leves+ls>maxL?" disabled":"")+'>+</button></span><span class="note">Chaque soldat compte au combat, mais il manque aux champs, mange le riz du grenier et pèse sur le contentement.'+(crit?" <strong>En ce moment, les rizières ont besoin de tous les bras.</strong>":isWinter(S.mois)?" En hiver, les champs n’ont besoin de personne.":"")+'</span></div>'+(inCamp?'<p class="note">'+inCamp+' d’entre eux sont en campagne.</p>':"")+(govCap()?'<p class="note">Les premiers soldats sont levés dans tes villages gouvernés ('+levesG()+' sur '+govCap()+' possibles) : ils ne manquent pas aux rizières de Kawashiro, mais leurs villages t’envoient moins.</p>':"")+'</section>';
+ var acost=Math.round(40*ashiCost()),asol=Math.round((S.ashi||0)*ashiCost());
+ h+='<section class="sec"><h3>Armée permanente <small>des ashigaru, soldats de métier</small></h3><div class="row"><span class="stepper"><button type="button" data-act="ashi:-1" aria-label="Renvoyer 10 ashigaru"'+(ashiHome()<10?" disabled":"")+'>−</button><output>'+(S.ashi||0)+'</output><button type="button" data-act="ashi:1" aria-label="Recruter 10 ashigaru"'+((S.ashi||0)+10>ashiCap()||S.mon<acost?" disabled":"")+'>+</button></span><span class="note">sur '+ashiCap()+' possibles. Recruter dix hommes coûte '+acost+' mon.</span></div><dl class="kv" style="margin-top:6px"><dt>Solde</dt><dd>'+asol+' mon par mois, plus '+Math.ceil((S.ashi||0)/5)+' balles de riz</dd><dt>Au village</dt><dd>'+ashiHome()+'</dd>'+(ashiGar()?'<dt>En garnison</dt><dd>'+ashiGar()+'</dd>':"")+(ashiCamp()?'<dt>En campagne</dt><dd>'+ashiCamp()+'</dd>':"")+'</dl><p class="note">Des hommes venus d’ailleurs, rōnin et cadets sans terre. Ils ne prennent aucun bras aux rizières, ne pèsent pas sur le contentement, valent 1,6 fois un paysan levé au combat et ne désertent pas. Ils peuvent tenir garnison dans tes villages gouvernés. Mais il faut les payer chaque mois : impayés deux mois de suite, la moitié s’en va.'+(S.ashiUnpaid?' <strong>Ils n’ont pas été payés le mois dernier.</strong>':"")+'</p></section>';
  var ut=used("train");
  h+='<section class="sec"><h3>Entraînement</h3><div class="row">'+btn("train","Entraîner la troupe (30 mon)",ut||S.mon<30||!homeSam().length)+'<span class="note">'+(ut?"La troupe s’est déjà entraînée ce mois-ci.":"Chaque samouraï présent a une chance de gagner en force.")+'</span></div></section>';
  return h;
 }
 function maxLev(){return Math.min(40*(1+S.tier)+govCap(),govCap()+W()-S.absents)}
 function renderChefVillage(){
- var c=S.cont;
+ var c=S.cont,EQ=contEq(),atr=attract(),nt=TIERS[S.tier+1],famM=Math.floor(S.famille/famConso()),free=S.logement-S.pop;
  var q=S.famille<=0?"Seigneur, les familles n’ont plus rien. Les enfants pleurent de faim.":c<=15?"Seigneur, ils aiguisent leurs faucilles, et ce n’est pas pour la moisson.":c<=30?"Les familles ont faim et peur. Je ne sais plus quoi leur dire.":c<=50?"On travaille, mais on s’inquiète. Un geste de ta part serait le bienvenu.":c<=70?"Le village est calme, seigneur. Les gens font leur travail.":"On chante dans les rizières. Les gens disent du bien de toi.";
- var nt=TIERS[S.tier+1];
- var h='<section class="sec"><p class="quote">« '+q+' »</p></section><section class="sec"><h3>'+TIERS[S.tier][1]+' de Kawashiro</h3><p class="note">'+(nt?"Il faudra "+nt[0]+" habitants à Kawashiro pour devenir un "+nt[1].toLowerCase()+". Chaque palier débloque de nouveaux chantiers et de nouvelles terres.":"Kawashiro est devenue une grande ville-château.")+'</p></section>'+lvlLine("chef");
- h+='<section class="sec"><h3>Le village</h3><dl class="kv"><dt>Habitants</dt><dd>'+S.pop+' (logements pour '+S.logement+')</dd><dt>En âge de travailler</dt><dd>'+W()+'</dd><dt>Réserve des familles</dt><dd>'+fl(S.famille)+' balles (environ '+Math.floor(S.famille/famConso())+' mois)</dd><dt>Forêt</dt><dd>'+Math.round(S.foret)+' %'+(S.foret<30?", épuisée":"")+'</dd></dl></section>';
- var trend=[];var t=TAX[S.impot].c;if(t>0)trend.push("l’impôt léger (+"+t+")");if(t<0)trend.push("l’impôt lourd ("+t+")");if(S.leves>=6)trend.push("les hommes levés (−"+Math.floor(S.leves/6)+")");if(S.famille<=0)trend.push("la famine (−8)");if(S.niv.temple>=3)trend.push("la pagode (+1)");
- h+='<section class="sec"><h3>Contentement <small>'+contWord(c)+'</small></h3><div class="row">'+meter(c,100)+'<b>'+c+'/100</b></div><p class="note" style="margin-top:.4em">'+(trend.length?"Chaque mois : "+trend.join(", ")+".":"Rien ne le fait bouger chaque mois pour l’instant.")+' Au-dessus de 65, de nouvelles familles s’installent s’il y a de la place et si les bandits restent calmes. Sous 30, certaines s’en vont.</p></section>';
- var ud=used("doleances");
- h+='<section class="sec"><div class="row">'+btn("doleances","Écouter les doléances",ud)+'<span class="note">'+(ud?"Déjà fait ce mois-ci.":"Gratuit. Le contentement monte de 3.")+'</span></div>'+(cur.results.chef?'<div class="result">'+esc(cur.results.chef)+'</div>':"")+'</section>';
+ var h=tiles([tile("Habitants",S.pop,free>0?free+" place"+(free>1?"s":"")+" libre"+(free>1?"s":""):"plus aucune place",free<=0?"warn":""),tile("Contentement",c+"<small>/100</small>","tend vers "+EQ.v+(EQ.v>c+1?" ↗":EQ.v<c-1?" ↘":""),c<35?"bad":c<50?"warn":""),tile("Réputation",atr+"<small>/100</small>",atr>=60?"attire des familles":"n’attire personne",atr>=60?"good":""),tile("Familles",famM+" mois","de riz en réserve",famM<3?"bad":famM<6?"warn":"")]);
+ h+='<p class="quote">« '+q+' »</p>';
+ h+='<section class="sec"><h3>'+TIERS[S.tier][1]+' de Kawashiro <small>'+(nt?"prochain palier : "+nt[1].toLowerCase()+" à "+nt[0]+" habitants":"le plus haut palier")+'</small></h3>'+(nt?'<div class="row">'+meter(S.pop,nt[0])+'<b>'+S.pop+' / '+nt[0]+'</b></div>':"")+(S.flags.faste>mIdx()?'<p class="note" style="margin-top:.4em"><strong>Année de mariages :</strong> le village grandit plus vite.</p>':"")+'</section>';
+ h+='<section class="sec"><h3>Besoins du village</h3><div class="needs">'+needList().map(function(n){var m=S.needs&&S.needs[n.k]!==undefined?S.needs[n.k]:liveNeed(n),gr=!m&&needGrace(n),cls=m===undefined?"":m?"ok":gr?"wait":"ko",sub="";
+  if(n.q){var g=n.g||n.k,qq=needQty(n),st=fl(S.biens[g]||0);sub=st+" en stock · "+qq+"/mois"}else if(n.k==="fete")sub=mIdx()-(S.lastFete||-99)<12?"faite cette année":"à organiser au temple";else if(n.k==="peaux")sub="en hiver";else if(n.k==="famille")sub=famM+" mois de réserve";else if(n.k==="temple")sub=m?"":"à construire";
+  if(gr)sub="ils patientent encore";
+  return '<div class="need '+cls+'"><i>'+(m===undefined?"·":m?"✓":gr?"…":"✗")+'</i><span>'+esc(n.l)+(sub?'<small>'+sub+'</small>':"")+'</span></div>'}).join("")+'</div></section>';
+ h+=fold("cont-detail","Ce qui fait le contentement (tend vers "+EQ.v+")",'<table class="tb"><tbody>'+EQ.p.map(function(x){return '<tr><td>'+esc(x[0])+'</td><td class="n">'+(x[0]==="Base"?x[1]:sgn(x[1]))+'</td></tr>'}).join("")+'</tbody></table><p class="note">Chaque mois, le contentement se rapproche de ce niveau. Les fêtes et les bonnes nouvelles le font monter un temps, puis l’effet s’estompe.</p>');
+ h+=fold("aide-village","Comment grandit le village ?",'<p class="note">À partir de 55 de contentement, de nouvelles familles s’installent s’il y a des maisons libres et si les bandits restent calmes ; sous 30, certaines s’en vont. Au-dessus de 60 de réputation, des familles des villages voisins viennent aussi. Une récolte magnifique, ou une grande fête du Nouvel An avec du saké, ouvre une année de mariages. Chaque palier ajoute des besoins : couverts, ils relèvent le contentement (+4) ; manquants, ils le font baisser (−6), après six mois de patience.'+(S.an<=3?" Pendant les premières années, Kawashiro attire en plus les familles en quête de terres neuves.":"")+'</p><p class="note">'+BLD_LEVELS.chef[S.niv.chef-1]+'. '+BLD_EFFECT.chef[S.niv.chef-1]+'</p>');
+ var ud=used("doleances","season");
+ h+='<section class="sec" style="margin-top:14px"><div class="row">'+btn("doleances","Écouter les doléances",ud,"ghost")+'<span class="note">'+(ud?"Déjà fait cette saison.":"Gratuit, une fois par saison : +2 de contentement.")+'</span></div>'+(cur.results.chef?'<div class="result">'+esc(cur.results.chef)+'</div>':"")+'</section>';
  return h;
 }
 var TASKS=[
  ["foret","Forêt","Les bûcherons coupent du bois, utile aux chantiers. Environ 0,6 bois par homme et par mois.",function(){return true}],
- ["constr","Chantiers","Font avancer le chantier en cours. Sans eux, rien ne se construit.",function(){return true}],
+ ["constr","Chantiers","Font avancer les chantiers en cours, le premier de la liste d’abord. Sans eux, rien ne se construit.",function(){return true}],
  ["garde","Garde","Surveillent les alentours : la menace des bandits monte moins vite, et ils aident à défendre.",function(){return true}],
  ["charbon","Charbonnière","Transforment le bois en charbon, une balle de bois par homme et par mois.",function(){return S.prod.charbon}],
  ["sake","Brasserie","En hiver seulement : 2 balles de riz deviennent 2 jarres de saké par homme.",function(){return S.prod.sake}],
@@ -1984,65 +2211,83 @@ var TASKS=[
 ];
 function renderTravail(){
  fixTasks();
- var need=fieldNeed(),fw=fieldWorkers(),free=freeForTasks(),left=100-pctSum();
- var h='<section class="sec"><dl class="kv"><dt>En âge de travailler</dt><dd>'+W()+'</dd>'+(levesK()?'<dt>Levés comme soldats</dt><dd>'+levesK()+'</dd>':"")+(S.absents?'<dt>Partis à la guerre du seigneur</dt><dd>'+S.absents+'</dd>':"")+'<dt>Disponibles pour le travail</dt><dd>'+free+'</dd><dt>Aux rizières</dt><dd>'+fw+'</dd><dt>Besoin des rizières ce mois-ci</dt><dd>'+need+(need===0?" (rien à faire en cette saison)":"")+'</dd></dl>';
- if(need>0){var cv=Math.min(1,fw/need);h+='<div class="row" style="margin-top:6px">'+meter(cv,1)+'<b>'+Math.round(cv*100)+' %</b></div><p class="note">'+(cv<1?"Il manque "+(need-fw)+" bras aux rizières : une partie du travail ne sera pas faite, et la récolte en souffrira.":"Les rizières ont tous les bras qu’il leur faut.")+'</p>'}
- if(horseLabour())h+='<p class="note">Tes chevaux de labour allègent le repiquage de '+Math.round(horseLabour()*100)+' %.</p>';
- h+='<p class="note" style="margin-top:.4em">Tu répartis le travail en pourcentage des bras disponibles : la répartition suit toute seule quand le village grandit. Tous ceux qui ne sont affectés nulle part vont aux rizières ('+left+' % en ce moment).</p></section>';
- h+='<section class="sec"><h3>Répartition du travail</h3>';
- TASKS.forEach(function(t){
-  if(!t[3]())return;
-  var p=S.tpct[t[0]]||0,n=S.taches[t[0]],extra="";
-  if(t[0]==="constr"){var cap=chantierCap(),ce=constrEff();extra=S.chantier?(n>cap?' <span class="tag red">'+ce+' au travail sur '+n+' (maximum '+cap+' pour ce chantier, les autres retournent aux rizières)</span>':' <span class="note">(maximum '+cap+' pour ce chantier)</span>'):' <span class="note">(aucun chantier en cours : ils retournent aux rizières)</span>'}
-  h+='<div class="task"><div><strong>'+t[1]+'</strong> <span class="note">'+p+' % : '+n+' homme'+(n>1?"s":"")+'</span>'+extra+'<div class="note">'+t[2]+'</div></div>'+stepper("task-"+t[0],p+" %",p>0,left>0,t[1])+'</div>';
+ var need=fieldNeed(),fw=fieldWorkers(),free=freeForTasks(),left=100-pctSum(),cv=need>0?Math.min(1,fw/need):1;
+ var h=tiles([tile("Bras disponibles",free,levesK()?levesK()+" levés comme soldats":S.absents?S.absents+" partis à la guerre":W()+" en âge de travailler"),tile("Aux rizières",fw,left+" % des bras"),tile("Besoin des rizières",need,need?"ce mois-ci":"rien en cette saison"),tile("Travail des champs",need?Math.round(cv*100)+" %":"–",need?(cv<1?"il manque "+(need-fw)+" bras":"tout sera fait"):"",need?(cv<1?"bad":"good"):"")]);
+ var GR=[["Matériaux et chantiers",["foret","constr","garde"]],["Ateliers",["charbon","sake","soie","papier","poterie","forge"]],["Nourriture",["peche","chasse"]]];
+ GR.forEach(function(g){
+  var ts=g[1].map(function(k){return TASKS.filter(function(t){return t[0]===k})[0]}).filter(function(t){return t&&t[3]()});if(!ts.length)return;
+  h+='<section class="sec"><h3>'+g[0]+'</h3>';
+  ts.forEach(function(t){var p=S.tpct[t[0]]||0,n=S.taches[t[0]],extra="";
+   if(t[0]==="constr"){var cap=constrCapTot();extra=!S.chantiers.length?' <span class="tag">aucun chantier</span>':n>cap?' <span class="tag red">'+(n-cap)+' de trop</span>':' <span class="note">· '+cap+' au maximum</span>'}
+   h+='<div class="task"><div><strong>'+t[1]+'</strong> <span class="note">'+n+' homme'+(n>1?"s":"")+'</span>'+extra+'</div>'+stepper("task-"+t[0],p+" %",p>0,left>0,t[1])+'</div>'});
+  h+='</section>';
  });
- h+='</section>';
- if(!S.prod.charbon&&!S.prod.sake&&!S.prod.papier&&!S.prod.poterie&&!S.prod.soie)h+='<p class="note">D’autres activités apparaîtront ici quand tu auras construit leurs ateliers (onglet Chantiers).</p>';
+ if(!S.prod.charbon&&!S.prod.sake&&!S.prod.papier&&!S.prod.poterie&&!S.prod.soie)h+='<p class="note">D’autres activités apparaîtront quand tu auras construit leurs ateliers.</p>';
+ h+=fold("aide-travail","À quoi sert chaque tâche ?",'<p class="note">Tu répartis les bras disponibles en pourcentages : la répartition suit toute seule quand le village grandit. Tous ceux qui ne sont affectés nulle part vont aux rizières. Au printemps et à l’automne, les rizières ont besoin de beaucoup de bras ; en hiver, d’aucun.'+(horseLabour()?" Tes chevaux allègent le repiquage de "+Math.round(horseLabour()*100)+" %.":"")+'</p><dl class="kv">'+TASKS.filter(function(t){return t[3]()}).map(function(t){return '<dt>'+t[1]+'</dt><dd style="font-weight:400">'+t[2]+'</dd>'}).join("")+'</dl>');
  return h;
 }
 function renderRizieres(){
- var met=S.meteoPred;
- var h='<p class="note">Météo de l’année : '+(met?METEO[met].l+" selon Kōen. "+METEO[met].d:"inconnue. Kōen peut lire les signes au temple.")+'</p>';
- h+='<p class="note">Tes rizières sont groupées en zones. On défriche une zone par lots de '+lotSize()+' parcelles, puis on l’améliore niveau par niveau (+8 % de riz chacun, jusqu’au niveau 5). Chaque parcelle nourrit environ quinze habitants, mais demande des bras au repiquage et à la moisson.</p>';
+ var met=S.meteoPred,tot=0,parc=0;S.zones.forEach(function(z){tot+=zoneYield(z,met||"normale");parc+=z.n});
+ var h=tiles([tile("Parcelles",parc,"cultivées"),tile("Riz attendu","~"+Math.round(tot),"avant impôt"),tile("Météo",met?METEO[met].l:"inconnue",met?"selon Kōen":"Kōen peut la lire"),tile("Chantiers",S.chantiers.length+" / "+chSlots(),freeSlot()?"une place libre":"tous occupés",freeSlot()?"":"warn")]);
  S.zones.forEach(function(z){
-  var exp=Math.round(zoneYield(z,met||"normale")),busy=!!S.chantier,dc=zoneDefCost(z),uc=zoneUpCost(z),sc=zoneSpecCost(z),here=S.chantier&&S.chantier.id===z.id&&(S.chantier.type==="defr"||S.chantier.type==="zniv"||S.chantier.type==="zspec");
-  h+='<div class="card"><div class="card-top"><span class="card-name">'+esc(z.nom)+(z.dmg>0?'<span class="tag red">Abîmée</span>':"")+(z.spec?'<span class="tag green">'+ZSPEC[z.type][0]+'</span>':"")+'</span><span class="note">'+TYPE_LAB[z.type]+'</span></div>';
-  h+='<dl class="kv" style="margin-top:4px"><dt>Parcelles cultivées</dt><dd>'+z.n+' sur '+z.cap+(z.neuf?' (+'+z.neuf+' défrichées, prêtes au printemps)':"")+'</dd><dt>Niveau</dt><dd>'+z.niv+' / 5</dd><dt>Riz attendu</dt><dd>'+exp+' balles</dd></dl>';
-  if(here)h+='<p class="note"><em>Chantier en cours dans cette zone.</em></p>';
-  else{h+='<div class="row" style="margin-top:6px">';
-   if(z.n+z.neuf<z.cap)h+=btn("zdefr:"+z.id,"Défricher "+dc.lot+" parcelle"+(dc.lot>1?"s":"")+" ("+dc.work+" journées)",busy,"ghost");
-   if(z.n>0&&z.niv<5)h+=btn("zniv:"+z.id,"Améliorer au niveau "+(z.niv+1)+" ("+costTxt(uc)+", "+uc.work+" journées)",busy||!canPay(uc),"ghost");
-   if(z.n>0&&!z.spec&&ZSPEC[z.type])h+=btn("zspec:"+z.id,ZSPEC[z.type][0]+" ("+costTxt(sc)+", "+sc.work+" journées)",busy||!canPay(sc),"ghost");
-   h+='</div>';if(!z.spec&&ZSPEC[z.type]&&z.n>0)h+='<p class="note">'+ZSPEC[z.type][0]+' : '+ZSPEC[z.type][1]+'</p>'}
-  h+='</div>';
+  var exp=Math.round(zoneYield(z,met||"normale")),busy=!freeSlot(),dc=zoneDefCost(z),uc=zoneUpCost(z),sc=zoneSpecCost(z),here=zoneBusy(z.id),k="z"+z.id,op=UIO[k];
+  h+='<details class="zone" data-k="'+k+'"'+(op?" open":"")+'><summary><span class="pn">'+esc(z.nom)+(z.dmg>0?'<span class="tag red">abîmée</span>':"")+(z.spec?'<span class="tag green">'+ZSPEC[z.type][0]+'</span>':"")+(here?'<span class="tag">chantier</span>':"")+'</span><span class="zs">'+z.n+'/'+z.cap+' parcelles · niv. '+z.niv+'/5 · ~'+exp+' balles</span></summary><div class="zb"><p class="note" style="margin:0 0 6px">'+TYPE_LAB[z.type]+(z.neuf?" · "+z.neuf+" parcelle"+(z.neuf>1?"s":"")+" défrichée"+(z.neuf>1?"s":"")+", prête"+(z.neuf>1?"s":"")+" au printemps":"")+'</p>';
+  if(here)h+='<p class="note"><em>Un chantier est en cours dans cette zone.</em></p>';
+  else{
+   if(z.n+z.neuf<z.cap)h+=pcard({n:"Défricher "+dc.lot+" parcelle"+(dc.lot>1?"s":""),e:"Nouvelles terres, qui produiront à partir du printemps.",c:{work:dc.work},a:"zdefr:"+z.id,ok:!busy});
+   if(z.n>0&&z.niv<5)h+=pcard({n:"Niveau "+(z.niv+1),e:"+8 % de riz dans cette zone.",c:uc,a:"zniv:"+z.id,ok:!busy&&canPay(uc)});
+   if(z.n>0&&!z.spec&&ZSPEC[z.type])h+=pcard({n:ZSPEC[z.type][0],e:ZSPEC[z.type][1],c:sc,a:"zspec:"+z.id,ok:!busy&&canPay(sc)});
+   if(z.n+z.neuf>=z.cap&&z.niv>=5&&(z.spec||!ZSPEC[z.type]))h+='<p class="note">Cette zone est entièrement aménagée.</p>';
+  }
+  h+='</div></details>';
  });
- if(S.chantier)h+='<p class="note">Un seul chantier à la fois : termine celui en cours ('+esc(S.chantier.label)+') avant d’en lancer un autre.</p>';
+ if(!freeSlot())h+='<p class="note" style="margin-top:8px">Tous tes chantiers sont occupés : attends qu’un chantier se termine pour en lancer un autre.</p>';
+ h+=fold("aide-riz","Comment marchent les rizières ?",'<p class="note">Tes rizières sont groupées en zones. On défriche par lots de '+lotSize()+' parcelles, puis on améliore chaque zone niveau par niveau (+8 % de riz chacun, jusqu’au niveau 5). Chaque parcelle nourrit environ quinze habitants, mais demande des bras au repiquage et à la moisson.'+(met?" Cette année : "+METEO[met].d:"")+'</p>');
  return h;
 }
 function projCard(key,label,desc,cost,work,can,act,extra){
  return '<div class="card"><div class="card-top"><span class="card-name">'+esc(label)+'</span><span class="note">'+costTxt(cost)+(cost.mon||cost.bois?", ":"")+work+' journées</span></div><p class="note" style="margin:.2em 0 .4em">'+esc(desc)+'</p>'+(extra||"")+btn(act,"Lancer le chantier",!can)+'</div>';
 }
-function canPay(c){return S.mon>=(c.mon||0)&&S.bois>=woodCost(c)&&!S.chantier}
+function canPay(c){return S.mon>=(c.mon||0)&&S.bois>=woodCost(c)&&fl(S.biens.fer)>=(c.fer||0)&&freeSlot()}
 var WSHOP={charbon:["La charbonnière","charbon",function(){return S.prod.charbon}],sake:["La brasserie","sake",function(){return S.prod.sake}],soie:["La magnanerie","soie",function(){return S.prod.soie}],papier:["L’atelier de washi","papier",function(){return S.prod.papier}],poterie:["Le four de potier","poterie",function(){return S.prod.poterie}],forge:["La forge","forge",function(){return S.prod.forge}],pecherie:["La pêcherie","pecherie",function(){return S.prod.pecherie}]};
 function wlCost(k){var P=PROJ[WSHOP[k][1]],l=S.wl[k]||1;return {mon:P.mon*l,bois:P.bois*l,work:P.work*l}}
 function renderChantiers(){
- var h="";
- if(S.chantier){var c=S.chantier;var done=1-c.reste/c.total,ce=constrEff(),cap=chantierCap(),slow=(S.mois===12||S.mois<=2)?.6:1;h+='<section class="sec"><h3>Chantier en cours</h3><p><strong>'+esc(c.label)+'</strong></p><div class="row">'+meter(done,1)+'<b>'+Math.round(done*100)+' %</b></div><p class="note">'+(ce?ce+" ouvriers sur le chantier (maximum "+cap+"). Encore environ "+Math.ceil(c.reste/(ce*slow*(hasArt("charpentier")?1.25:1)))+" décades."+(slow<1?" Le froid de l’hiver ralentit les travaux.":"")+" Les ouvriers mangent "+(Math.round(ce*.15*10)/10)+" balles de riz par mois.":"<strong>Personne ne travaille sur le chantier.</strong> Affecte des hommes aux chantiers dans l’onglet Travail.")+'</p></section>'}
- else h+='<p class="note">Aucun chantier en cours. Un seul chantier à la fois : les matériaux sont payés au lancement, puis il faut des ouvriers (onglet Travail). Chaque chantier accepte un nombre maximum d’ouvriers, le froid ralentit les travaux en hiver, et les ouvriers mangent sur ton grenier. Les zones de rizières se défrichent et s’améliorent dans l’onglet Rizières.</p>';
- h+='<section class="sec"><h3>Améliorer les bâtiments</h3>';
- Object.keys(BLD_LEVELS).forEach(function(b){
-  var lv=S.niv[b];if(lv>=3)return;var c=UPG_COST[lv+1];
-  h+=projCard(b,BLD_LEVELS[b][lv],BLD_EFFECT[b][lv],c,c.work,canPay(c),"upg:"+b);
- });
- h+='</section><section class="sec"><h3>Le village</h3>';
- Object.keys(PROJ).forEach(function(k){var p=PROJ[k];if(p.cat!=="village"||!p.req())return;h+=projCard(k,p.l+(k==="maisons"&&S.prod.maisons?" (déjà "+S.prod.maisons+")":""),p.d,p,p.work,canPay(p),"proj:"+k)});
- h+='</section><section class="sec"><h3>Productions</h3>';
- Object.keys(PROJ).forEach(function(k){var p=PROJ[k];if(p.cat!=="prod"||!p.req())return;h+=projCard(k,p.l,p.d,p,p.work,canPay(p),"proj:"+k)});
- var wl=Object.keys(WSHOP).filter(function(k){return WSHOP[k][2]()});
- if(wl.length){h+='</section><section class="sec"><h3>Améliorer les ateliers <small>+35 % de production par niveau, jusqu’au niveau 3</small></h3>';wl.forEach(function(k){var l=S.wl[k]||1;if(l>=3){h+='<p class="note">'+WSHOP[k][0]+' est au niveau maximum.</p>';return}var c=wlCost(k);h+=projCard(k,WSHOP[k][0]+" : niveau "+(l+1),"La production passe à +"+Math.round(35*l)+" %.",c,c.work,canPay(c),"wlv:"+k)})}
- h+='</section><section class="sec"><h3>L’eau et les rizières</h3>';
- Object.keys(PROJ).forEach(function(k){var p=PROJ[k];if(p.cat!=="eau"||!p.req())return;h+=projCard(k,p.l,p.d,p,p.work,canPay(p),"proj:"+k)});
+ var al=chAlloc(),slow=(S.mois===12||S.mois<=2)?.6:1,ce=constrEff(),cap=constrCapTot();
+ var h=tiles([tile("Chantiers",S.chantiers.length+" / "+chSlots(),freeSlot()?"place libre":"tous occupés",freeSlot()?"":"warn"),tile("Ouvriers",ce+(S.chantiers.length?" / "+cap:""),S.taches.constr>ce&&S.chantiers.length?(S.taches.constr-ce)+" de trop":slow<1?"le froid ralentit":"sur les chantiers"),tile("Mon",fl(S.mon)),tile("Bois",fl(S.bois),fl(S.biens.fer)?fl(S.biens.fer)+" fer":"")]);
+ if(S.chantiers.length){
+  h+='<section class="sec"><h3>En cours</h3>';
+  S.chantiers.forEach(function(c,i){var done=1-c.reste/c.total,a=al[c.uid]||0,cp=chantierCap(c),dec=a?Math.ceil(c.reste/(a*slow*(hasArt("charpentier")?1.25:1))):0;
+   h+='<div class="pc"><span class="pn">'+(i+1)+'. '+esc(c.label)+'</span><span class="pa"><span class="row" style="gap:4px">'+btn("chup:"+c.uid,"↑",i===0,"ghost sm")+btn("chdown:"+c.uid,"↓",i===S.chantiers.length-1,"ghost sm")+'</span>'+btn("hire:"+c.uid,"Journaliers · "+hireCost(c)+" mon",S.mon<hireCost(c)||c.hire===idx(),"ghost sm")+'</span><span class="pe"><span class="row" style="gap:8px;flex-wrap:nowrap">'+meter(done,1)+'<b>'+Math.round(done*100)+' %</b></span>'+(a?a+" / "+cp+" ouvriers · encore ~"+dec+" décade"+(dec>1?"s":""):'<span class="short">Personne n’y travaille'+(i>0&&S.taches.constr>0?" : les chantiers avant lui prennent tous les ouvriers.":" : affecte des hommes dans l’onglet Travail.")+'</span>')+'</span></div>'});
+  h+='</section>';
+ }
+ var CAT={logement:"Logement",batiments:"Bâtiments",ateliers:"Ateliers",eau:"Eau",grands:"Grands projets"};
+ var HOUSE=["maisons","maisons2","quartier","grandquartier"],ATEL=["forge","pecherie"];
+ var LOCK={maisons2:"Au village (250 habitants)",grandmarche:"Au village (250 habitants)",quartier:"Au bourg (600 habitants)",qartisans:"Au bourg (600 habitants)",remparts:"Au bourg (600 habitants)",grandtemple:"Au bourg (600 habitants)",grandquartier:"À la ville (1 500 habitants)",chateau:"À la ville (1 500 habitants)",qmarchand:"À la ville (1 500 habitants)",soie:"Après la plantation de mûriers"};
+ var items={logement:[],batiments:[],ateliers:[],eau:[]},locked={logement:[],batiments:[],ateliers:[],eau:[],grands:[]};
+ Object.keys(PROJ).forEach(function(k){var p=PROJ[k],cat=HOUSE.indexOf(k)>=0?"logement":p.cat==="prod"||ATEL.indexOf(k)>=0?"ateliers":p.cat==="eau"?"eau":"batiments";
+  if(!p.req()){if(LOCK[k]&&!S.prod[k])locked[cat].push([p.l,LOCK[k]]);return}
+  var busy=!p.repeat&&chBusy("proj",k);items[cat].push({n:p.l,e:p.d,c:p,a:"proj:"+k,ok:canPay(p)&&!busy,busy:busy})});
+ Object.keys(BLD_LEVELS).forEach(function(b){var lv=S.niv[b];if(lv>=3)return;var c=UPG_COST[lv+1],busy=chBusy("upg",b);items.batiments.unshift({n:BLD_LEVELS[b][lv],e:BLD_EFFECT[b][lv],c:c,a:"upg:"+b,ok:canPay(c)&&!busy,busy:busy,tag:"amélioration"})});
+ Object.keys(WSHOP).filter(function(k){return WSHOP[k][2]()}).forEach(function(k){var l=S.wl[k]||1;if(l>=3)return;var c=wlCost(k),busy=chBusy("wlv",k);items.ateliers.push({n:WSHOP[k][0]+" · niveau "+(l+1),e:"La production passe à +"+Math.round(35*l)+" %.",c:c,a:"wlv:"+k,ok:canPay(c)&&!busy,busy:busy})});
+ var cc=cur.chcat||"logement";
+ h+='<section class="sec"><h3>Lancer un chantier</h3><div class="pills">'+Object.keys(CAT).map(function(k){var n=k==="grands"?Object.keys(GP).filter(canPayGP).length:items[k].filter(function(x){return x.ok}).length;return '<button type="button" class="pill" data-act="chcat:'+k+'" aria-pressed="'+(cc===k)+'">'+CAT[k]+(n?'<span class="n" aria-label="'+n+' possible'+(n>1?"s":"")+'">'+n+'</span>':"")+'</button>'}).join("")+'</div>';
+ if(cc==="grands"){
+  Object.keys(GP).forEach(function(k){var G=GP[k],L=gpL(k),lock=S.tier<G.t,c=gpCost(k),busy=chBusy("gp",k);
+   if(lock){locked.grands.push([G.l,G.t===2?"Au bourg (600 habitants)":"À la ville (1 500 habitants)"]);return}
+   var dots='<span class="dots" aria-label="étape '+L+' sur 3">'+[0,1,2].map(function(i){return i<L?"●":"○"}).join("")+'</span>';
+   var st=G.st[L];
+   h+='<div class="pc'+(L>=3||busy||canPayGP(k)?"":" dim")+'"><span class="pn">'+esc(G.l)+dots+(busy?'<span class="tag">en cours</span>':L>=3?'<span class="tag green">achevé</span>':"")+'</span><span class="pa">'+(L<3&&!busy?btn("gp:"+k,"Étape "+(L+1),!canPayGP(k),"sm"):"")+'</span><span class="pe">'+(L<3?'<strong>'+esc(st.l)+'</strong> : '+esc(st.e)+(busy?"":'<br>'+costChips(c)):"Les trois étapes sont terminées.")+'</span></div>';
+  });
+  if(!Object.keys(GP).some(function(k){return S.tier>=GP[k].t}))h+='<p class="empty">Les grands projets s’ouvrent quand Kawashiro devient un bourg.</p>';
+  h+=fold("gp-all","Le détail des étapes",Object.keys(GP).map(function(k){var G=GP[k],L=gpL(k);return '<p style="margin:.5em 0 .1em"><strong>'+esc(G.l)+'</strong> <span class="note">'+esc(G.d)+'</span></p><ul class="gp-st">'+G.st.map(function(st,i){return '<li class="'+(i<L?"done":i===L?"next":"")+'">'+(i<L?"✓ ":"")+esc(st.l)+' : '+esc(st.e)+'</li>'}).join("")+'</ul>'}).join(""));
+ }else{
+  if(!items[cc].length)h+='<p class="empty">Rien à construire ici pour le moment.</p>';
+  items[cc].forEach(function(x){h+=pcard(x)});
+  if(cc==="eau")h+='<p class="note" style="margin-top:8px">Les zones de rizières se défrichent et s’améliorent dans l’onglet Rizières.</p>';
+ }
+ var lk=locked[cc];if(lk.length)h+=fold("lock-"+cc,"Bientôt disponible ("+lk.length+")",lk.map(function(x){return '<div class="pc dim"><span class="pn">'+esc(x[0])+'</span><span class="pe">'+x[1]+'</span></div>'}).join(""));
  h+='</section>';
+ h+=fold("aide-ch","Comment marchent les chantiers ?",'<p class="note">Tu peux mener '+chSlots()+' chantier'+(chSlots()>1?"s":"")+' à la fois'+(S.tier<4?", un de plus à chaque palier du village":"")+'. Les matériaux sont payés au lancement, puis il faut des ouvriers (onglet Travail). Ils vont d’abord au chantier n° 1, jusqu’à son maximum, puis au suivant : les flèches changent l’ordre. Le froid de l’hiver ralentit les travaux, les ouvriers mangent un peu du riz de ton grenier, et les journaliers font avancer un chantier contre de l’argent, une fois par décade.</p><p class="note">Sur chaque fiche : 銭 mon, 木 bois, 鉄 fer, 工 journées de travail. En rouge, ce qui te manque.</p>');
  return h;
 }
 function renderTemple(){
@@ -2055,7 +2300,7 @@ function renderTemple(){
  return h;
 }
 function pmOf(k){return S.pm[k]||1}
-function pmShift(k,d){S.pm[k]=clamp(pmOf(k)+d,.55,1.7)}
+function pmShift(k,d){S.pm[k]=clamp(pmOf(k)+d,.3,1.7)}
 function trendOf(k){var a=pmOf(k),b=(S.pmPrev&&S.pmPrev[k])||1;return a>b+.02?"▲ en hausse":a<b-.02?"▼ en baisse":"stable"}
 function advisor(){return S.fils.role==="conseiller"?1+S.fils.gestion*.01:1}
 function honPrice(){return .97+S.honneur*.0006}
@@ -2066,7 +2311,7 @@ function haveL(lieu,k){var L=S.lieux[lieu];return k==="riz"?L.riz:k==="cheval"?6
 function normL(lieu,k){var L=S.lieux[lieu];return k==="riz"?L.pop*.6:Math.max(10,L.pop*.08)}
 function stockF(lieu,k,side){if(k==="cheval")return 1;var q=haveL(lieu,k),n=normL(lieu,k),L=S.lieux[lieu];if(side==="sell")return q<n*.5?1.3:q>n*2?.85:1;if(k==="riz"&&L.famine)return 1.5;return q<n*.3?1.2:q>n*1.5?.85:1}
 function sellAvail(lieu,k){var L=S.lieux[lieu];if(k==="cheval")return 6;if(k==="riz")return Math.max(0,Math.floor(L.riz-lieuNeed(lieu)*3));return Math.floor(L.stock[k]||0)}
-function tradePrice(lieu,k,side){var f=TRADE[lieu][side][k];var p=basePrice(k)*f*stockF(lieu,k,side);if(S.lieux[lieu].commerce)p*=side==="buy"?1.1:.9;if(side==="sell")p*=1.25;if(side==="buy"&&lieu==="tsuruga"&&S.flags.foire>idx())p*=S.flags.etal>idx()?1.3:1.2;if(side==="buy")p*=advisor()*(hasN("langue")?1.07:1)*honPrice();else if(hasN("langue"))p*=.93;return Math.round(p*10)/10}
+function tradePrice(lieu,k,side){var f=TRADE[lieu][side][k];var p=basePrice(k)*f*stockF(lieu,k,side);if(S.lieux[lieu].commerce)p*=side==="buy"?1.1:.9;if(side==="sell")p*=1.25;if(side==="buy"&&(lieu==="ishiba"||lieu==="hamana")&&gpL("port")>=2)p*=1.2;if(side==="buy"&&lieu==="tsuruga"&&S.flags.foire>idx())p*=S.flags.etal>idx()?1.3:1.2;if(side==="buy")p*=advisor()*(hasN("langue")?1.07:1)*honPrice();else if(hasN("langue"))p*=.93;return Math.round(p*10)/10}
 function qty(k){return k==="mon"?S.mon:k==="bois"?S.bois:k==="riz"?S.riz:(S.biens[k]||0)}
 function addQty(k,n){if(k==="mon"){ch("mon",n);return}if(k==="bois")ch("bois",n);else if(k==="riz")ch("riz",n);else S.biens[k]=Math.max(0,(S.biens[k]||0)+n)}
 function goodName(k,n){if(k==="mon")return "mon";if(k==="riz")return "balles de riz";if(k==="bois")return "bois";if(k==="cheval")return n>1?"chevaux":"cheval";return GOODS[k].l.toLowerCase()}
@@ -2182,6 +2427,10 @@ function canTarget(k){var D=LIEUX_DEF[k],L=S.lieux[k];return ["village","bourg",
 function bOf(id){if(id==="bataille")return battleBuild();return id.indexOf("lieu:")===0?placeBuild(id.slice(5)):BUILD[id]}
 function renderGov(k){var g=S.gov[k];if(!g)return '<p>Ce village n’est plus à toi.</p>';var s=samBy(g.sam),lv=govLevy(k);
  var h='<section class="sec"><dl class="kv"><dt>Habitants</dt><dd>'+g.pop+'</dd><dt>Loyauté du village</dt><dd>'+g.loy+'/100</dd><dt>Le mois dernier</dt><dd>'+(g.last?g.last.riz+" balles de riz et "+g.last.q+" "+goodName(g.last.res,g.last.q):"rien encore")+'</dd><dt>Soldats levés ici</dt><dd>'+lv+' sur '+Math.round(g.pop*.12)+' possibles</dd></dl><div class="row" style="margin-top:6px">'+meter(g.loy,100)+'<b>'+g.loy+'/100</b></div>'+(g.half>idx()?'<p class="note">Après tes concessions, il t’envoie moitié moins pendant un temps.</p>':"")+'</section>';
+ h+='<section class="sec"><h3>Aménagements <small>les habitants font le travail eux-mêmes</small></h3>'+(g.work?'<p class="note"><em>Travaux en cours : '+GAM[g.work.t][0].toLowerCase()+' niveau '+g.work.lvl+', terminé dans '+Math.max(1,g.work.until-mIdx())+' mois.</em></p>':"");
+ Object.keys(GAM).forEach(function(t){var l=gamL(g,t),c=gamCost(g,t);h+='<div class="card"><div class="card-top"><span class="card-name">'+GAM[t][0]+'</span><span class="note">niveau '+l+' / 3</span></div><p class="note" style="margin:.2em 0 .4em">'+GAM[t][1]+'</p>'+(l<3?btn("gam:"+k+":"+t,"Niveau "+(l+1)+" ("+c.mon+" mon, "+c.bois+" bois, "+(2+l)+" mois)",!!g.work||S.mon<c.mon||S.bois<c.bois,"ghost"):"")+'</div>'});
+ h+='</section><section class="sec"><h3>Garnison</h3><div class="row"><span class="stepper"><button type="button" data-act="gar:'+k+':-1" aria-label="Rappeler 10 ashigaru"'+((g.gar||0)<10?" disabled":"")+'>−</button><output>'+(g.gar||0)+'</output><button type="button" data-act="gar:'+k+':1" aria-label="Envoyer 10 ashigaru"'+(ashiHome()<10?" disabled":"")+'>+</button></span><span class="note">ashigaru en garnison ('+ashiHome()+' disponibles au village).</span></div><p class="note">Une garnison défend le village contre les pillages, rend une révolte deux fois moins probable et fait monter la loyauté. Avec 20 hommes, Sagara n’ose plus réclamer le village.</p></section>';
+ h+='<section class="sec"><h3>Les jeunes du village</h3><div class="row">'+btn("exode:"+k,g.exode===false?"Les laisser partir à Kawashiro":"Les retenir au village",false,"ghost")+'<span class="note">'+(g.exode===false?"Les jeunes restent au village, qui grandit plus vite.":"Une partie des jeunes part s’installer à Kawashiro, s’il y a de la place.")+'</span></div></section>';
  h+='<section class="sec"><h3>Le gouverneur</h3>'+(s?'<div class="card"><div class="card-top"><span class="card-name">'+esc(s.nom)+'</span><span class="note">gestion '+s.ges+'</span></div>'+traitTags(s)+'<div class="stat-line"><span>Loyauté</span>'+meter(s.loy,100)+'<b>'+s.loy+'</b></div></div>':'<p class="empty">Aucun gouverneur : le village se détache de toi un peu plus chaque mois.</p>')+'<div class="row" style="margin-top:8px">'+btn("regov:"+k,s?"Changer de gouverneur":"Nommer un gouverneur",false,"ghost")+btn("freegov:"+k,"Rendre sa liberté au village",false,"ghost")+'</div><p class="note">Le gouverneur décide de tout, selon son caractère : un brutal fait rentrer beaucoup mais fâche les habitants, un généreux les apaise mais t’envoie moins, un ambitieux fait grandir le village… et lui avec. Plus il gère bien, plus le village t’envoie.</p></section>';
  return h}
 function renderLieu(k,tab){
@@ -2194,7 +2443,12 @@ function renderLieu(k,tab){
   if(S.campagne)return h+'<p class="note">Ton armée est déjà en campagne.</p>';
   return h+'<div class="row">'+btn("prepwar:"+k,"Préparer une campagne")+'</div>';
  }
- var h2='<section class="sec"><p>'+esc(D.desc)+'</p>'+lieuStatus(k)+lieuKv(k)+'</section>'+lifeHtml(k);
+ var h2;
+ if(WD[k]&&!L.gouv){var nsL=(S.news||[]).filter(function(n){return n.k===k}).slice(0,4),wP=WD[k],prL=[];if(wP.rr>=1.5)prL.push("riz");for(var gq in wP.prod)prL.push(goodName(gq,2));
+  h2=tiles([tile("Relations",relWord(L.rel),L.rel+" / 100",L.rel<=-40?"bad":L.rel>=40?"good":""),tile("Force",known(k)?L.force:"?",known(k)?(LIEUX_DEF[k].fort?"fortifié":"soldats"):"envoie un espion"),tile("Habitants",L.pop,prL.length?prL.join(", "):"vit du commerce"),tile("Greniers",grainWord(k),"trésor "+wealthWord(k),L.famine?"bad":"")]);
+  h2+='<section class="sec"><p style="margin-top:0">'+esc(D.desc)+'</p>'+lieuStatus(k)+'<p class="note">'+esc(D.chef)+(D.trait?", "+D.trait.toLowerCase():"")+' · '+D.dist+' décade'+(D.dist>1?"s":"")+' de marche'+(LIEUX_DEF[k].seigneur==="otsuki"?" · vassal d’Ōtsuki":CAMP[k]==="rival"?" · camp de Sagara":"")+'</p></section>';
+  if(nsL.length)h2+=fold("news-"+k,"Nouvelles ("+nsL.length+")",'<ul class="chron">'+nsL.map(function(n){return '<li><time>'+esc(n.t)+'</time>'+esc(n.x)+'</li>'}).join("")+'</ul>',true);
+ }else h2='<section class="sec"><p>'+esc(D.desc)+'</p>'+lieuStatus(k)+lieuKv(k)+'</section>'+lifeHtml(k);
  if(k==="col")h2+='<section class="sec"><div class="row">'+meter(S.menace,100,true)+'<b>'+S.menace+'/100</b></div><p class="note">'+menaceWord(S.menace)+'</p></section>';
  if(TRADE[k])h2+='<p class="note">'+esc(TRADE[k].desc)+(L.commerce?" Un traité de commerce te donne de meilleurs prix ici, et un petit revenu chaque mois.":" Un traité de commerce donnerait de meilleurs prix et un petit revenu chaque mois.")+'</p>';
  h2+='<section class="sec"><h3>Agir</h3>'+lieuActions(k)+'</section>';
@@ -2205,7 +2459,7 @@ function caraForm(k){if(!cur.cara||cur.cara.lieu!==k)cur.cara={lieu:k,sell:{},bu
 function caraStep(g){return g==="soie"||g==="armes"||g==="cheval"?1:5}
 function caraTotals(k,f){var v=0,c=0;Object.keys(f.sell).forEach(function(g){v+=f.sell[g]*tradePrice(k,g,"buy")});Object.keys(f.buy).forEach(function(g){c+=f.buy[g]*tradePrice(k,g,"sell")});return {v:Math.round(v),c:Math.round(c)}}
 function tollFree(){var Ls=S.lieux.seki;return Ls.gouv||Ls.allie||Ls.commerce||Ls.rel>=20||S.flags.contrebande>idx()}
-function caraRisk(k,esc2){var r=Math.max(0,(S.menace-30)/150)*(hasN("routes")?.5:1)+(LIEUX_DEF[k].prov===2?.05:0)+(S.flags.pontCasse>idx()?.06:0);if(S.flags.pont)r*=.85;if(k==="hiraoka")r*=1.5;if(esc2)r*=.5;return r}
+function caraRisk(k,esc2){var r=(LIEUX_DEF[k].prov===1&&gpL("route")>=1?.7:1)*(Math.max(0,(S.menace-30)/150)*(hasN("routes")?.5:1)+(LIEUX_DEF[k].prov===2?.05:0)+(S.flags.pontCasse>idx()?.06:0));if(S.flags.pont)r*=.85;if(k==="hiraoka")r*=1.5;if(esc2)r*=.5;return r}
 function renderCaravane(k){
  var D=LIEUX_DEF[k],L=S.lieux[k],T=TRADE[k];
  if(T.min!==undefined&&L.rel<T.min)return '<p>'+esc(D.chef)+' refuse de commercer avec toi pour l’instant. Améliore d’abord vos relations ('+relWord(L.rel).toLowerCase()+').</p>';
@@ -2241,7 +2495,7 @@ function renderCampagne(){
  if(c){
   var D=LIEUX_DEF[c.cible],g=samBy(c.gen);
   var where=c.phase==="aller"?"En marche vers "+nomLieu(c.cible)+", arrivée dans "+Math.max(0,c.arrive-idx())+" décade(s).":c.phase==="bataille"?"Devant "+nomLieu(c.cible)+" : la bataille t’attend.":"Sur le chemin du retour, arrivée dans "+Math.max(0,c.arrive-idx())+" décade(s).";
-  return '<section class="sec"><h3>Armée en campagne</h3><p>'+where+'</p>'+(c.phase==="bataille"?'<div class="row">'+btn("openbattle","Aller sur le champ de bataille")+'</div>':"")+'<dl class="kv">'+(g?'<dt>Général</dt><dd>'+esc(g.nom)+'</dd>':"")+'<dt>Samouraïs</dt><dd>'+c.sam.map(function(id){var s=samBy(id);return s?s.nom:""}).filter(Boolean).join(", ")+'</dd><dt>Soldats</dt><dd>'+c.soldats+'</dd><dt>Vivres</dt><dd>'+fl(c.vivres)+' balles (−'+(Math.round(campCons(c)*10)/10)+' par décade)</dd><dt>Moral</dt><dd>'+Math.round(c.moral)+'/100</dd><dt>Force</dt><dd>'+Math.round(campPower(c))+'</dd></dl><p class="note">Pendant ce temps, le village se défend avec une force de '+homePower()+'.</p></section>';
+  return '<section class="sec"><h3>Armée en campagne</h3><p>'+where+'</p>'+(c.phase==="bataille"?'<div class="row">'+btn("openbattle","Aller sur le champ de bataille")+'</div>':"")+'<dl class="kv">'+(g?'<dt>Général</dt><dd>'+esc(g.nom)+'</dd>':"")+'<dt>Samouraïs</dt><dd>'+c.sam.map(function(id){var s=samBy(id);return s?s.nom:""}).filter(Boolean).join(", ")+'</dd><dt>Soldats</dt><dd>'+c.soldats+(c.ashi?' et '+c.ashi+' ashigaru':"")+'</dd><dt>Vivres</dt><dd>'+fl(c.vivres)+' balles (−'+(Math.round(campCons(c)*10)/10)+' par décade)</dd><dt>Moral</dt><dd>'+Math.round(c.moral)+'/100</dd><dt>Force</dt><dd>'+Math.round(campPower(c))+'</dd></dl><p class="note">Pendant ce temps, le village se défend avec une force de '+homePower()+'.</p></section>';
  }
  var targets=LIEUX_ORDER.filter(canTarget);
  var f=cur.form||(cur.form={cible:targets.indexOf("col")>=0?"col":targets[0],sam:{},soldats:Math.min(10,S.leves),vivres:10});
@@ -2250,8 +2504,8 @@ function renderCampagne(){
  var samList=S.sam.filter(function(s){return !s.blesse&&!isAway(s)});
  var chosen=samList.filter(function(s){return f.sam[s.id]}),nSam=chosen.length;
  f.soldats=Math.min(f.soldats,S.leves);
- var cons=.5*nSam+.1*f.soldats,needV=Math.ceil(cons*(D.dist*2+(D.fort?3:1)));
- var pw=0;chosen.forEach(function(s){pw+=s.force});pw=pw*(1+.15*S.equip)+f.soldats*soldierValue()+Math.min(S.chevaux,nSam*2)*1.5;
+ f.ashi=Math.min(f.ashi||0,ashiHome());var cons=.5*nSam+.1*(f.soldats+f.ashi),needV=Math.ceil(cons*(D.dist*2+(D.fort?3:1)));
+ var pw=0;chosen.forEach(function(s){pw+=s.force});pw=pw*(1+.15*S.equip)+f.soldats*soldierValue()+f.ashi*ashiVal()+Math.min(S.chevaux,nSam*2)*1.5;
  var gen=chosen.filter(function(s){return s.id===f.gen})[0]||chosen.slice().sort(function(a,b){return b.cmd-a.cmd})[0];
  var est="inconnues : envoie d’abord un espion";if(known(f.cible)&&nSam){var ef=lieuForce(f.cible)*(D.fort?1.1:1),r=pw*1.12*(1+(gen?gen.cmd:0)*.03)/Math.max(1,ef);est=r>=1.3?"bonnes":r>=.9?"incertaines":"très risquées"}
  var h='<section class="sec"><h3>Préparer une campagne</h3><div class="row"><label for="cible">Cible</label><select class="sel" id="cible" data-form="cible">'+[1,2].map(function(pv){return '<optgroup label="'+PROV_NAME[pv]+'">'+targets.filter(function(k){return LIEUX_DEF[k].prov===pv}).map(function(k){return '<option value="'+k+'"'+(k===f.cible?" selected":"")+'>'+LIEUX_DEF[k].nom+' ('+LIEUX_DEF[k].dist+' décade'+(LIEUX_DEF[k].dist>1?"s":"")+')</option>'}).join("")+'</optgroup>'}).join("")+'</select></div>';
@@ -2260,7 +2514,7 @@ function renderCampagne(){
  h+='<section class="sec"><h3>Samouraïs</h3>'+(samList.length?samList.map(function(s){return '<label class="check"><input type="checkbox" data-form="sam:'+s.id+'"'+(f.sam[s.id]?" checked":"")+'> '+esc(s.nom)+' <span class="note">(combat '+s.force+', commande '+s.cmd+(visTraits(s).length?', '+visTraits(s).map(function(t){return TR[t].l.toLowerCase()}).join(", "):"")+')</span></label>'}).join(""):'<p class="empty">Aucun samouraï disponible.</p>');
  if(nSam)h+='<div class="row" style="margin-top:6px"><label for="gen">Général</label><select class="sel" id="gen" data-form="gen">'+chosen.map(function(s){return '<option value="'+s.id+'"'+(gen&&gen.id===s.id?" selected":"")+'>'+esc(s.nom)+' (commandement '+s.cmd+')</option>'}).join("")+'</select></div><p class="note">Son commandement et son caractère pèsent sur toute la bataille. Tu pourras le laisser décider à ta place.</p>';
  h+='</section>';
- h+='<section class="sec"><h3>Soldats et vivres</h3><div class="row"><span>Soldats</span>'+stepper("f-sold",f.soldats,f.soldats>0,f.soldats<S.leves,"soldats")+'<span class="note">sur '+S.leves+' levés (au dojo)</span></div><div class="row"><span>Vivres</span>'+stepper("f-viv",f.vivres,f.vivres>0,f.vivres+5<=S.riz,"vivres")+'<span class="note">balles de riz. Conseillé : '+needV+' pour l’aller, la bataille'+(D.fort?", le siège":"")+' et le retour.</span></div></section>';
+ h+='<section class="sec"><h3>Soldats et vivres</h3><div class="row"><span>Soldats</span>'+stepper("f-sold",f.soldats,f.soldats>0,f.soldats<S.leves,"soldats")+'<span class="note">sur '+S.leves+' levés (au dojo)</span></div>'+(S.ashi?'<div class="row"><span>Ashigaru</span>'+stepper("f-ashi",f.ashi||0,(f.ashi||0)>0,(f.ashi||0)+10<=ashiHome(),"ashigaru")+'<span class="note">sur '+ashiHome()+' au village</span></div>':"")+'<div class="row"><span>Vivres</span>'+stepper("f-viv",f.vivres,f.vivres>0,f.vivres+5<=S.riz,"vivres")+'<span class="note">balles de riz. Conseillé : '+needV+' pour l’aller, la bataille'+(D.fort?", le siège":"")+' et le retour.</span></div></section>';
  var crit=(S.mois>=4&&S.mois<=5)||(S.mois>=9&&S.mois<=10);
  h+='<section class="sec"><dl class="kv"><dt>Force de l’armée</dt><dd>'+Math.round(pw)+' (selon le moral)</dd><dt>Tes chances</dt><dd>'+est+'</dd><dt>Le village gardera</dt><dd>une force d’environ '+Math.max(0,Math.round(homePower()-pw))+'</dd></dl>'+(crit?'<p class="note"><strong>Les rizières ont besoin de bras en ce moment : chaque soldat absent coûte du riz à la récolte.</strong></p>':"")+(isWinter(S.mois)?'<p class="note">En hiver, chaque samouraï et chaque groupe de 5 soldats a besoin d’une peau pour les vêtements chauds ('+(nSam+Math.ceil(f.soldats/5))+' en tout). Sans elles, le moral baisse.</p>':"")+'<div class="row" style="margin-top:8px">'+btn("launch","Partir en campagne",!nSam||f.vivres<1)+'</div></section>';
  return h;
@@ -2280,7 +2534,7 @@ function renderRegistre(){
  if(cur.tab==="bilan")return renderBilan();
  if(cur.tab==="chronique")return renderChronique();
  var est=harvestEstimate();
- var h='<section class="sec"><dl class="kv"><dt>Date</dt><dd>'+dateLabel()+'</dd><dt>Riz</dt><dd>'+fl(S.riz)+' balles (−'+monthlyExpense()+' par mois)</dd><dt>Réserve des familles</dt><dd>'+fl(S.famille)+' balles</dd><dt>Argent</dt><dd>'+fl(S.mon)+' mon</dd><dt>Bois</dt><dd>'+fl(S.bois)+'</dd><dt>Palier</dt><dd>'+TIERS[S.tier][1]+'</dd><dt>Habitants du domaine</dt><dd>'+domPop()+'</dd><dt>À Kawashiro</dt><dd>'+S.pop+' (logements pour '+S.logement+')</dd>'+Object.keys(S.gov).map(function(k){return '<dt>À '+LIEUX_DEF[k].nom+'</dt><dd>'+S.gov[k].pop+' (gouverné)</dd>'}).join("")+'<dt>Honneur</dt><dd>'+S.honneur+'/100</dd><dt>Mérite</dt><dd>'+fl(S.merite)+' point(s)</dd><dt>Contentement</dt><dd>'+S.cont+'/100, '+contWord(S.cont).toLowerCase()+'</dd><dt>Défense du village</dt><dd>force '+homePower()+'</dd><dt>Faveur du seigneur</dt><dd>'+S.faveur+'/100</dd><dt>Menace des bandits</dt><dd>'+S.menace+'/100</dd><dt>Impôt</dt><dd>'+TAX[S.impot].label.toLowerCase()+' ('+TAX[S.impot].pct+')</dd><dt>Récolte attendue</dt><dd>environ '+est.taxed+' balles pour ton grenier</dd>'+(S.chantier?'<dt>Chantier</dt><dd>'+esc(S.chantier.label)+'</dd>':"")+(S.campagne?'<dt>Campagne</dt><dd>vers '+LIEUX_DEF[S.campagne.cible].nom+'</dd>':"")+(S.missions.length?'<dt>Hommes en route</dt><dd>'+S.missions.map(function(m){return LIEUX_DEF[m.cible].nom}).join(", ")+'</dd>':"")+(S.commandes.length?'<dt>Commandes</dt><dd>'+S.commandes.map(cmdLabel).join(", ")+'</dd>':"")+(S.dette?'<dt>Dette</dt><dd>'+S.dette+' mon à Ihei</dd>':"")+'</dl></section>';
+ var h='<section class="sec"><dl class="kv"><dt>Date</dt><dd>'+dateLabel()+'</dd><dt>Riz</dt><dd>'+fl(S.riz)+' balles (−'+monthlyExpense()+' par mois)</dd><dt>Réserve des familles</dt><dd>'+fl(S.famille)+' balles</dd><dt>Argent</dt><dd>'+fl(S.mon)+' mon</dd><dt>Bois</dt><dd>'+fl(S.bois)+'</dd><dt>Palier</dt><dd>'+TIERS[S.tier][1]+'</dd><dt>Habitants du domaine</dt><dd>'+domPop()+'</dd><dt>À Kawashiro</dt><dd>'+S.pop+' (logements pour '+S.logement+')</dd>'+Object.keys(S.gov).map(function(k){return '<dt>À '+LIEUX_DEF[k].nom+'</dt><dd>'+S.gov[k].pop+' (gouverné)</dd>'}).join("")+'<dt>Honneur</dt><dd>'+S.honneur+'/100</dd><dt>Mérite</dt><dd>'+fl(S.merite)+' point(s)</dd><dt>Contentement</dt><dd>'+S.cont+'/100, '+contWord(S.cont).toLowerCase()+'</dd><dt>Défense du village</dt><dd>force '+homePower()+'</dd><dt>Faveur du seigneur</dt><dd>'+S.faveur+'/100</dd><dt>Menace des bandits</dt><dd>'+S.menace+'/100</dd><dt>Impôt</dt><dd>'+TAX[S.impot].label.toLowerCase()+' ('+TAX[S.impot].pct+')</dd><dt>Récolte attendue</dt><dd>environ '+est.taxed+' balles pour ton grenier</dd>'+(S.chantiers.length?'<dt>Chantiers</dt><dd>'+S.chantiers.map(function(c){return esc(c.label)}).join(", ")+'</dd>':"")+(S.campagne?'<dt>Campagne</dt><dd>vers '+LIEUX_DEF[S.campagne.cible].nom+'</dd>':"")+(S.missions.length?'<dt>Hommes en route</dt><dd>'+S.missions.map(function(m){return LIEUX_DEF[m.cible].nom}).join(", ")+'</dd>':"")+(S.commandes.length?'<dt>Commandes</dt><dd>'+S.commandes.map(cmdLabel).join(", ")+'</dd>':"")+(S.dette?'<dt>Dette</dt><dd>'+S.dette+' mon à Ihei</dd>':"")+'</dl></section>';
  h+='<section class="sec"><button type="button" class="btn ghost" data-act="reset">Recommencer une partie</button></section>';
  return h;
 }
@@ -2301,15 +2555,16 @@ function renderOver(){
 /* =========================================================
    Actions
    ========================================================= */
-var CAUSE_OF={buy:"Achats au marché",sell:"Ventes au marché",mbuy:"Achats au marché",msell:"Ventes au marché",buywood:"Achats au marché",sellwood:"Ventes au marché",sellgoods:"Ventes au marché",give:"Dons aux familles",fishgive:"Dons aux familles",gift:"Présents aux samouraïs",train:"Entraînement",upg:"Chantiers",proj:"Chantiers",offrande:"Temple et fêtes",fete:"Temple et fêtes",tool:"Outils et armes",equip:"Outils et armes",loan:"Prêt d’Ihei",msg:"Messagers et espions",spy:"Messagers et espions","c-go":"Caravanes",recruit:"Recrutement",artisan:"Recrutement",deliver:"Commandes",launch:"Guerre",patrol:"Patrouilles"};
+var CAUSE_OF={hire:"Chantiers",buy:"Achats au marché",sell:"Ventes au marché",mbuy:"Achats au marché",msell:"Ventes au marché",buywood:"Achats au marché",sellwood:"Ventes au marché",sellgoods:"Ventes au marché",give:"Dons aux familles",fishgive:"Dons aux familles",gift:"Présents aux samouraïs",train:"Entraînement",upg:"Chantiers",proj:"Chantiers",offrande:"Temple et fêtes",fete:"Temple et fêtes",tool:"Outils et armes",equip:"Outils et armes",loan:"Prêt d’Ihei",msg:"Messagers et espions",spy:"Messagers et espions","c-go":"Caravanes",recruit:"Recrutement",artisan:"Recrutement",deliver:"Commandes",launch:"Guerre",patrol:"Patrouilles"};
 function act(a){
  var p=a.split(":"),k=p[0],v=p[1],w=p[2];
  trace=[];var msg=null;CAUSE=CAUSE_OF[k]||"Décisions";
  if(k==="openmap"){trace=null;CAUSE=null;closeMenu();openMap();return}
+ if(k==="chcat"){trace=null;CAUSE=null;cur.chcat=v;renderMenu();return}
  if(k==="openbattle"){trace=null;CAUSE=null;openMenu("bataille");return}
  if(k==="closebattle"){trace=null;CAUSE=null;closeMenu();return}
  if(k==="autobattle"){trace=null;CAUSE=null;for(var ab=0;ab<8;ab++){var be=battleEv();if(!be||be.ph>=3)break;var pj=autoPick(be);if(pj<0)break;choose(be.uid,pj)}return}
- if(k==="preset"){trace=null;CAUSE=null;var pf=cur.form;if(!pf)return;var av=S.sam.filter(function(x){return !x.blesse&&!isAway(x)}).sort(function(a,b){return b.force+b.cmd-a.force-a.cmd});pf.sam={};if(v==="small"){if(av[0])pf.sam[av[0].id]=true;pf.soldats=Math.min(S.leves,Math.ceil(S.leves/3))}else{av.forEach(function(x){pf.sam[x.id]=true});pf.soldats=S.leves}var D9=LIEUX_DEF[pf.cible],ns=Object.keys(pf.sam).length;pf.vivres=Math.min(fl(S.riz),Math.ceil((.5*ns+.1*pf.soldats)*(D9.dist*2+(D9.fort?3:1)))+(v==="full"?3:0));pf.gen=av[0]?av[0].id:null;renderMenu();return}
+ if(k==="preset"){trace=null;CAUSE=null;var pf=cur.form;if(!pf)return;var av=S.sam.filter(function(x){return !x.blesse&&!isAway(x)}).sort(function(a,b){return b.force+b.cmd-a.force-a.cmd});pf.sam={};if(v==="small"){if(av[0])pf.sam[av[0].id]=true;pf.soldats=Math.min(S.leves,Math.ceil(S.leves/3));pf.ashi=Math.floor(ashiHome()/20)*10}else{av.forEach(function(x){pf.sam[x.id]=true});pf.soldats=S.leves;pf.ashi=Math.floor(ashiHome()/10)*10}var D9=LIEUX_DEF[pf.cible],ns=Object.keys(pf.sam).length;pf.vivres=Math.min(fl(S.riz),Math.ceil((.5*ns+.1*(pf.soldats+pf.ashi))*(D9.dist*2+(D9.fort?3:1)))+(v==="full"?3:0));pf.gen=av[0]?av[0].id:null;renderMenu();return}
  if(k==="openlieu"){trace=null;CAUSE=null;openMenu("lieu:"+v,w||"infos");return}
  if(k==="prepwar"){trace=null;CAUSE=null;cur.form={cible:v,sam:{},soldats:Math.min(10,S.leves),vivres:10};openMenu("porte","campagne");return}
  switch(k){
@@ -2320,26 +2575,33 @@ function act(a){
   case "gift":var s=samBy(v);if(s&&!used("gift-"+v)&&S.mon>=20){ch("mon",-20);samLoy(s,has(s,"ambitieux")?6:10);use("gift-"+v);msg=s.nom+" accepte ton présent."}break;
   case "lev":var inCamp=S.campagne?S.campagne.soldats:0;S.leves=clamp(S.leves+(+v)*levStep(),inCamp,maxLev());break;
   case "train":if(!used("train")&&S.mon>=30){ch("mon",-30);use("train");var up=[],bonus=S.niv.dojo>=2?.2:0;homeSam().forEach(function(s){if(s.force<10&&chance((has(s,"jeune")?.8:has(s,"vieux")?.1:.4)+bonus+(isWinter(S.mois)?.15:0))){s.force++;up.push(s.nom)}if(chance(.15)&&s.cmd<10)s.cmd++});msg=up.length?"Progrès : "+up.join(", ")+".":"Une rude journée, mais personne ne progresse vraiment."}break;
-  case "doleances":if(!used("doleances")){use("doleances");ch("cont",3);var L=["On se plaint du prix du sel au marché.","Une veuve demande de l’aide pour réparer son toit.","Les jeunes veulent une fête au printemps.","On dit que les soldats levés manquent aux champs.","Les gens de Kamino regardent notre rivière d’un mauvais œil.","Un vieux paysan te remercie d’être venu l’écouter.","On murmure que les bandits ont des espions au village.","Les femmes voudraient un atelier pour travailler l’hiver."];cur.results.chef=pick(L)}break;
+  case "doleances":if(!used("doleances","season")){use("doleances","season");ch("cont",2);var L=["On se plaint du prix du sel au marché.","Une veuve demande de l’aide pour réparer son toit.","Les jeunes veulent une fête au printemps.","On dit que les soldats levés manquent aux champs.","Les gens de Kamino regardent notre rivière d’un mauvais œil.","Un vieux paysan te remercie d’être venu l’écouter.","On murmure que les bandits ont des espions au village.","Les femmes voudraient un atelier pour travailler l’hiver."];cur.results.chef=pick(L)}break;
   default:
    if(k.indexOf("task-")===0){var tk=k.slice(5),d=+v;var left=100-pctSum();S.tpct[tk]=clamp((S.tpct[tk]||0)+(d>0?Math.min(5,left):-5),0,100);fixTasks();break}
  }
   switch(k){
-  case "zdefr":var zd=zoneBy(+v);if(zd&&!S.chantier){var dc2=zoneDefCost(zd);if(dc2.lot>0){S.chantier={type:"defr",id:zd.id,lot:dc2.lot,label:"Défrichage : "+zd.nom,reste:dc2.work,total:dc2.work};msg="Le défrichage commence dans "+zd.nom+"."}}break;
-  case "zniv":var zn=zoneBy(+v);if(zn&&!S.chantier&&zn.niv<5){var uc2=zoneUpCost(zn);if(canPay(uc2)){ch("mon",-uc2.mon);ch("bois",-woodCost(uc2));S.chantier={type:"zniv",id:zn.id,label:zn.nom+" : niveau "+(zn.niv+1),reste:uc2.work,total:uc2.work};msg="Chantier lancé : "+zn.nom+", niveau "+(zn.niv+1)+"."}}break;
-  case "zspec":var zs2=zoneBy(+v);if(zs2&&!S.chantier&&!zs2.spec){var sc2=zoneSpecCost(zs2);if(canPay(sc2)){ch("mon",-sc2.mon);ch("bois",-woodCost(sc2));S.chantier={type:"zspec",id:zs2.id,label:ZSPEC[zs2.type][0]+" : "+zs2.nom,reste:sc2.work,total:sc2.work};msg="Chantier lancé : "+ZSPEC[zs2.type][0].toLowerCase()+" dans "+zs2.nom+"."}}break;
-  case "wlv":var WP=WSHOP[v];if(WP&&!S.chantier){var wlc=wlCost(v);if(canPay(wlc)){ch("mon",-wlc.mon);ch("bois",-woodCost(wlc));S.chantier={type:"wlv",id:v,lvl:S.wl[v]+1,label:WP[0]+" : niveau "+(S.wl[v]+1),reste:wlc.work,total:wlc.work};msg="Chantier lancé : "+WP[0].toLowerCase()+", niveau "+(S.wl[v]+1)+"."}}break;
-  case "upg":var lv=S.niv[v]+1,c=UPG_COST[lv];if(canPay(c)){ch("mon",-c.mon);ch("bois",-woodCost(c));S.chantier={type:"upg",id:v,lvl:lv,label:BLD_LEVELS[v][lv-1],reste:c.work,total:c.work};msg="Chantier lancé : "+BLD_LEVELS[v][lv-1].toLowerCase()+"."}break;
-  case "proj":var P=PROJ[v];if(canPay(P)&&P.req()){ch("mon",-P.mon);ch("bois",-woodCost(P));S.chantier={type:"proj",id:v,label:P.l,reste:P.work,total:P.work};msg="Chantier lancé : "+P.l.toLowerCase()+"."}break;
+  case "zdefr":var zd=zoneBy(+v);if(zd&&freeSlot()&&!zoneBusy(zd.id)){var dc2=zoneDefCost(zd);if(dc2.lot>0){startCh({type:"defr",id:zd.id,lot:dc2.lot,label:"Défrichage : "+zd.nom,reste:dc2.work,total:dc2.work});msg="Le défrichage commence dans "+zd.nom+"."}}break;
+  case "zniv":var zn=zoneBy(+v);if(zn&&freeSlot()&&!zoneBusy(zn.id)&&zn.niv<5){var uc2=zoneUpCost(zn);if(canPay(uc2)){ch("mon",-uc2.mon);ch("bois",-woodCost(uc2));startCh({type:"zniv",id:zn.id,label:zn.nom+" : niveau "+(zn.niv+1),reste:uc2.work,total:uc2.work});msg="Chantier lancé : "+zn.nom+", niveau "+(zn.niv+1)+"."}}break;
+  case "zspec":var zs2=zoneBy(+v);if(zs2&&freeSlot()&&!zoneBusy(zs2.id)&&!zs2.spec){var sc2=zoneSpecCost(zs2);if(canPay(sc2)){ch("mon",-sc2.mon);ch("bois",-woodCost(sc2));startCh({type:"zspec",id:zs2.id,label:ZSPEC[zs2.type][0]+" : "+zs2.nom,reste:sc2.work,total:sc2.work});msg="Chantier lancé : "+ZSPEC[zs2.type][0].toLowerCase()+" dans "+zs2.nom+"."}}break;
+  case "wlv":var WP=WSHOP[v];if(WP&&freeSlot()&&!chBusy("wlv",v)){var wlc=wlCost(v);if(canPay(wlc)){ch("mon",-wlc.mon);ch("bois",-woodCost(wlc));startCh({type:"wlv",id:v,lvl:S.wl[v]+1,label:WP[0]+" : niveau "+(S.wl[v]+1),reste:wlc.work,total:wlc.work});msg="Chantier lancé : "+WP[0].toLowerCase()+", niveau "+(S.wl[v]+1)+"."}}break;
+  case "upg":var lv=S.niv[v]+1,c=UPG_COST[lv];if(c&&canPay(c)&&!chBusy("upg",v)){ch("mon",-c.mon);ch("bois",-woodCost(c));startCh({type:"upg",id:v,lvl:lv,label:BLD_LEVELS[v][lv-1],reste:c.work,total:c.work});msg="Chantier lancé : "+BLD_LEVELS[v][lv-1].toLowerCase()+"."}break;
+  case "proj":var P=PROJ[v];if(P&&canPay(P)&&P.req()&&(P.repeat||!chBusy("proj",v))){ch("mon",-P.mon);ch("bois",-woodCost(P));if(P.fer)S.biens.fer-=P.fer;startCh({type:"proj",id:v,label:P.l,reste:P.work,total:P.work});msg="Chantier lancé : "+P.l.toLowerCase()+"."}break;
+  case "hire":var hcC=chByUid(+v);if(hcC&&hcC.hire!==idx()){var hc=hireCost(hcC),hw=hireWork(hcC);if(S.mon>=hc){ch("mon",-hc);hcC.hire=idx();hcC.reste-=hw;msg="Des journaliers viennent prêter main-forte : "+hw+" journées de travail.";if(hcC.reste<=0)finishChantier(hcC)}}break;
+  case "chup":case "chdown":var ci=-1;S.chantiers.forEach(function(x,i){if(x.uid===+v)ci=i});var cj=k==="chup"?ci-1:ci+1;if(ci>=0&&cj>=0&&cj<S.chantiers.length){var tmp=S.chantiers[ci];S.chantiers[ci]=S.chantiers[cj];S.chantiers[cj]=tmp}break;
+  case "gp":if(GP[v]&&canPayGP(v)){var gc=gpCost(v),gs=GP[v].st[gpL(v)];ch("mon",-gc.mon);ch("bois",-woodCost(gc));S.biens.fer-=gc.fer;startCh({type:"gp",id:v,lvl:gpL(v)+1,label:GP[v].l+" : "+gs.l.toLowerCase(),reste:gc.work,total:gc.work});msg="Grand projet lancé : "+gs.l.toLowerCase()+"."}break;
+  case "ashi":if(+v>0){var ac=Math.round(40*ashiCost());if(S.ashi+10<=ashiCap()&&S.mon>=ac){ch("mon",-ac);S.ashi+=10;msg="Dix ashigaru rejoignent ta troupe."}}else if(ashiHome()>=10){S.ashi-=10;msg="Dix ashigaru sont renvoyés."}break;
+  case "gar":var gg2=S.gov[v];if(gg2){if(+w>0){if(ashiHome()>=10){gg2.gar=(gg2.gar||0)+10;msg="Dix ashigaru partent tenir garnison à "+LIEUX_DEF[v].nom+"."}}else if((gg2.gar||0)>=10)gg2.gar-=10}break;
+  case "gam":var gg3=S.gov[v];if(gg3&&!gg3.work&&GAM[w]&&gamL(gg3,w)<3){var gmc=gamCost(gg3,w);if(S.mon>=gmc.mon&&S.bois>=gmc.bois){ch("mon",-gmc.mon);ch("bois",-gmc.bois);var gml=gamL(gg3,w)+1;gg3.work={t:w,lvl:gml,until:mIdx()+1+gml};msg="Les habitants "+deLieu(v)+" commencent les travaux : "+GAM[w][0].toLowerCase()+", niveau "+gml+"."}}break;
+  case "exode":var gg4=S.gov[v];if(gg4)gg4.exode=gg4.exode===false;break;
   case "offrande":if(!used("offrande")&&S.mon>=20){use("offrande");ch("mon",-20);ch("cont",S.niv.temple>=2?5:3);msg="Kōen remercie le village pour son offrande."}break;
-  case "fete":if(!used("fete","year")&&S.mon>=30&&S.riz>=15){use("fete","year");ch("mon",-30);ch("riz",-15);var sk=S.biens.sake>=5;if(sk)S.biens.sake-=5;ch("cont",(S.niv.temple>=2?16:12)+(sk?4:0));if(S.flags.promesseFete)S.flags.promesseFete=0;log("Le village célèbre sa fête.");msg="Lanternes, tambours et saké : le village fait la fête jusqu’à l’aube."}break;
+  case "fete":if(!used("fete","year")&&S.mon>=30&&S.riz>=15){use("fete","year");S.lastFete=mIdx();ch("mon",-30);ch("riz",-15);var sk=S.biens.sake>=5;if(sk)S.biens.sake-=5;ch("cont",(S.niv.temple>=2?16:12)+(sk?4:0));if(S.flags.promesseFete)S.flags.promesseFete=0;log("Le village célèbre sa fête.");msg="Lanternes, tambours et saké : le village fait la fête jusqu’à l’aube."}break;
   case "presage":if(!used("presage")){use("presage");var t=[];
     if(S.mois>=3&&S.mois<=8){if(!S.meteoPred)S.meteoPred=chance(hasN("oeil")?1:.8)?S.meteo:pick(["normale","seche","pluvieuse","froide"]);t.push({normale:"L’année sera ordinaire, ni sèche ni noyée.",seche:"Je vois de la poussière : l’eau manquera cette année.",pluvieuse:"Les nuages seront lourds : craignez la rivière.",froide:"Le vent du nord soufflera tard : le riz aura froid."}[S.meteoPred])}
     t.push(S.menace>=60?"La fumée de l’encens part vers le col : des hommes armés approchent.":S.menace>=35?"Un corbeau s’est posé sur la porte. Restez vigilants.":"Les signes sont calmes du côté des collines.");
     if(S.lieux.hiraoka.rel<=-30)t.push("De l’autre côté du col, un homme aiguise sa colère contre toi.");
     cur.results.temple="Kōen ferme les yeux : « "+t.join(" ")+" »"}break;
-  case "buy":var pr=RICE_PRICE[season()][0]*10;if(S.mon>=pr){ch("mon",-pr);ch("riz",10)}break;
-  case "sell":if(S.riz>=10){ch("riz",-10);ch("mon",RICE_PRICE[season()][1]*10)}break;
+  case "buy":var pr=0,pm0=pmOf("riz");for(var ib=0;ib<10;ib++){pr+=localBuy("riz");pmShift("riz",.012)}pr=Math.round(pr);if(S.mon>=pr){ch("mon",-pr);ch("riz",10)}else S.pm.riz=pm0;break;
+  case "sell":if(S.riz>=10){var sv=0;for(var is=0;is<10;is++){sv+=localSell("riz");pmShift("riz",-.012)}ch("riz",-10);ch("mon",Math.round(sv))}break;
   case "buywood":if(S.mon>=40){ch("mon",-40);ch("bois",10)}break;
   case "sellwood":if(S.bois>=10){ch("bois",-10);ch("mon",20)}break;
   case "sellgoods":var gv=goodsValue();for(var g in S.biens)S.biens[g]-=fl(S.biens[g]);ch("mon",gv);msg="Ihei achète tout ton stock pour "+gv+" mon.";break;
@@ -2361,12 +2623,12 @@ function act(a){
   case "launch":var f=cur.form;if(!f)break;var ids=Object.keys(f.sam).filter(function(id){var s=samBy(id);return f.sam[id]&&s&&!s.blesse&&!isAway(s)});if(!ids.length||f.vivres<1||S.riz<f.vivres)break;
     var LD=LIEUX_DEF[f.cible];ch("riz",-f.vivres);
     var gen=f.gen&&ids.indexOf(f.gen)>=0?f.gen:ids.slice().sort(function(a,b){return samBy(b).cmd-samBy(a).cmd})[0];
-    S.campagne={cible:f.cible,sam:ids,gen:gen,soldats:Math.min(f.soldats,S.leves),vivres:f.vivres,moral:hasN("aime")?80:70,phase:"aller",depart:idx(),arrive:idx()+LD.dist};
-    if(isWinter(S.mois)){var np=ids.length+Math.ceil(S.campagne.soldats/5);if(S.biens.peaux>=np){S.biens.peaux-=np}else{S.campagne.moral-=15;toast("Sans vêtements chauds, tes hommes partent dans le froid : le moral baisse.")}}
+    S.campagne={cible:f.cible,sam:ids,gen:gen,soldats:Math.min(f.soldats,S.leves),ashi:Math.min(f.ashi||0,ashiHome()),vivres:f.vivres,moral:hasN("aime")?80:70,phase:"aller",depart:idx(),arrive:idx()+LD.dist};
+    if(isWinter(S.mois)){var np=ids.length+Math.ceil((S.campagne.soldats+S.campagne.ashi)/5);if(S.biens.peaux>=np){S.biens.peaux-=np}else{S.campagne.moral-=15;toast("Sans vêtements chauds, tes hommes partent dans le froid : le moral baisse.")}}
     if(LD.seigneur==="otsuki")ch("faveur",-20);else if(CAMP[f.cible]==="rival")ch("faveur",3);
     if(f.cible==="kozanji")hon(-10);
-    log("L’armée part en campagne contre "+nomLieu(f.cible)+".");cur.form=null;msg="L’armée quitte le village en direction de "+nomLieu(f.cible)+".";break;
-  case "msell":var qn=w==="all"?fl(qty(v)):Math.min(+w,fl(qty(v)));if(qn>0){var tot=0;for(var i=0;i<qn;i++){tot+=localSell(v);pmShift(v,-.012)}addQty(v,-qn);ch("mon",Math.round(tot));msg="Tu vends "+qn+" "+goodName(v,qn)+" pour "+Math.round(tot)+" mon."}break;
+    log("L’armée part en campagne contre "+nomLieu(f.cible)+".");cur.form=null;msg="L’armée quitte le village en direction "+deLieu(f.cible)+".";break;
+  case "msell":var qn=w==="all"?fl(qty(v)):Math.min(+w,fl(qty(v)));if(qn>0){var tot=0;for(var i=0;i<qn;i++){tot+=localSell(v);pmShift(v,(v==="riz"||v==="bois"?-.012:-.03)*(gpL("halle")>=1?.5:1))}addQty(v,-qn);ch("mon",Math.round(tot));msg="Tu vends "+qn+" "+goodName(v,qn)+" pour "+Math.round(tot)+" mon."}break;
   case "mbuy":var bn=+w,cost2=0,pmb=pmOf(v);for(var i2=0;i2<bn;i2++){cost2+=localBuy(v);pmShift(v,.012)}cost2=Math.round(cost2);if(S.mon>=cost2){ch("mon",-cost2);addQty(v,bn);msg="Tu achètes "+bn+" "+goodName(v,bn)+" pour "+cost2+" mon."}else S.pm[v]=pmb;break;
   case "fishgive":if(S.biens.poisson>=10){S.biens.poisson-=10;ch("famille",10);ch("cont",1);msg="Dix poissons séchés partent vers les familles."}break;
   case "equiparmes":if(S.equip<3&&fl(S.biens.armes)>=ARMES_NEED[S.equip]){S.biens.armes-=ARMES_NEED[S.equip];S.equip++;log("La troupe s’équipe avec les armes de la forge : "+EQUIP[S.equip].toLowerCase()+".");msg="Ta troupe s’équipe : "+EQUIP[S.equip].toLowerCase()+"."}break;
@@ -2450,11 +2712,13 @@ menuEl.addEventListener("click",function(e){
  var a=e.target.closest("[data-act]");if(a&&!a.disabled){
   var av=a.dataset.act;
   if(av.indexOf("c-sell-")===0||av.indexOf("c-buy-")===0){var pc=av.split(":"),side=pc[0].indexOf("c-sell-")===0?"sell":"buy",g=pc[0].slice(side==="sell"?7:6),cf=cur.cara;if(!cf)return;var stp=caraStep(g)*(+pc[1]);cf[side][g]=Math.max(0,(cf[side][g]||0)+stp);if(!cf[side][g])delete cf[side][g];renderMenu();return}
-  if(av.indexOf("f-")===0){var f=cur.form,pp=av.split(":"),d=+pp[1];if(pp[0]==="f-sold")f.soldats=clamp(f.soldats+d*5,0,S.leves);else f.vivres=clamp(f.vivres+d*5,0,fl(S.riz));renderMenu();return}
+  if(av.indexOf("f-")===0){var f=cur.form,pp=av.split(":"),d=+pp[1];if(pp[0]==="f-sold")f.soldats=clamp(f.soldats+d*5,0,S.leves);else if(pp[0]==="f-ashi")f.ashi=clamp((f.ashi||0)+d*10,0,ashiHome());else f.vivres=clamp(f.vivres+d*5,0,fl(S.riz));renderMenu();return}
   act(av);
  }
 });
 menuEl.addEventListener("change",function(e){var el=e.target.closest("[data-form]");if(!el)return;if(el.dataset.form==="c-esc"){if(cur.cara)cur.cara.esc=el.checked;renderMenu();return}formChange(el)});
+document.getElementById("alertBtn").addEventListener("click",function(){var ap=document.getElementById("alertPop");ap.hidden=!ap.hidden;this.setAttribute("aria-expanded",String(!ap.hidden))});
+document.getElementById("alertPop").addEventListener("click",function(e){var b=e.target.closest("[data-go]");if(!b)return;var p=b.dataset.go.split(":");this.hidden=true;document.getElementById("alertBtn").setAttribute("aria-expanded","false");if(!mapLayer.hidden)closeMap();openMenu(p[0],p[1]||undefined)});
 resbar.addEventListener("click",function(e){if(e.target.closest("[data-open]")||e.target.closest(".res"))openMenu("registre")});
 document.getElementById("nextMonth").addEventListener("click",advance);
 
@@ -2492,22 +2756,25 @@ function govMonthly(){
  Object.keys(S.gov).forEach(function(k){
   var g=S.gov[k],s=samBy(g.sam);
   if(!s){g.sam=null;g.loy=clamp(g.loy-4,0,100);if(!hasPending("gouverneur"))pushEvent("gouverneur",{k:k});if(g.loy<=0)loseVillage(k,"abandon");return}
-  var lv=govLevy(k),dl=g.loy<60?1:0;
+  if(!g.am)g.am={grenier:0,marche:0,palis:0,temple:0};
+  if(g.work&&mIdx()>=g.work.until){g.am[g.work.t]=g.work.lvl;log(LIEUX_DEF[k].nom+" : "+GAM[g.work.t][0].toLowerCase()+" au niveau "+g.work.lvl+".");g.work=null}
+  var lv=govLevy(k),dl=g.loy<60?1:0;dl+=gamL(g,"temple");if((g.gar||0)>=10)dl+=1;
   if(has(s,"brutal"))dl-=2;if(has(s,"genereux"))dl+=2;if(has(s,"sage"))dl+=1;if(S.honneur>70)dl+=1;if(S.honneur<30)dl-=1;if(hasN("gouverneurs"))dl+=1;if(lv>0)dl-=1;
   g.loy=clamp(g.loy+dl,0,100);
   var mult=(has(s,"brutal")?1.3:1)*(has(s,"genereux")?.8:1)*(has(s,"avide")?.75:1)*(.7+s.ges*.06)*(.5+g.loy/200)*(hasN("gouverneurs")?1.25:1)*(g.half>idx()?.5:1)*(1-Math.min(.5,lv/(g.pop*.12+1)*.5));
-  var r=Math.max(0,Math.round(g.pop*.03*mult)),res=GOV_RES[k],q=Math.max(0,Math.round(g.pop*(res==="fer"?.015:.025)*mult));
+  var r=Math.max(0,Math.round(g.pop*.024*mult*(1+.1*gamL(g,"grenier")))),res=GOV_RES[k],q=Math.max(0,Math.round(g.pop*(res==="fer"?.011:.018)*mult*(1+.15*gamL(g,"marche"))));
   ch("riz",r);addQty(res,q);g.last={riz:r,res:res,q:q};
-  var gr=g.pop*.005*(g.loy>50?1:.3)*(has(s,"ambitieux")?1.5:1);g.pop+=Math.floor(gr)+(chance(gr%1)?1:0);
+  var gr=g.pop*.005*(g.loy>50?1:.3)*(has(s,"ambitieux")?1.5:1)*(1+.15*gamL(g,"temple"));g.pop+=Math.floor(gr)+(chance(gr%1)?1:0);
+  if(g.exode!==false&&g.loy>=50&&S.pop<S.logement){var ex=gr*.3,exn=Math.min(Math.floor(ex)+(chance(ex%1)?1:0),S.logement-S.pop,Math.max(0,g.pop-60));if(exn>0){g.pop-=exn;CAUSE="Venus des villages gouvernés";ch("pop",exn,true);CAUSE="Villages gouvernés"}}
   var fer=hasN("ferme")?.5:1;
-  if(g.loy<15&&chance(.25*fer)&&!hasPending("revolte"))pushEvent("revolte",{k:k});
+  if(g.loy<15&&chance(.25*fer*((g.gar||0)>=10?.5:1))&&!hasPending("revolte"))pushEvent("revolte",{k:k});
   else if(has(s,"ambitieux")&&s.loy<35&&chance(.1*fer)&&!hasPending("secession"))pushEvent("secession",{k:k});
   else if(has(s,"avide")&&chance(.06)&&!hasPending("detournement"))pushEvent("detournement",{k:k});
  });
  CAUSE=null;
 }
 function tierUp(){
- var t=S.tier,name=TIERS[t][1].toLowerCase(),before=S.zones.length;
+ S.tierSince=mIdx();var t=S.tier,name=TIERS[t][1].toLowerCase(),before=S.zones.length;
  expandZones(S.zones,t);var added=S.zones.length-before,cap=TZ[Math.min(t,4)][1];
  gainMerit(2,"Kawashiro devient un "+name);log("Kawashiro devient un "+name+".");
  pushEvent("rapport",{title:"Kawashiro devient un "+name,who:"Yohei, chef des paysans",msg:"Kawashiro a passé le cap des "+TIERS[t][0]+" habitants. Chaque zone de rizières peut maintenant compter jusqu’à "+cap+" parcelles"+(added?", et "+added+" nouvelle"+(added>1?"s zones s’ouvrent":" zone s’ouvre")+" à défricher":"")+". De nouveaux chantiers sont possibles chez le chef du village, et on défriche désormais par lots de "+lotSize()+" parcelles."});
@@ -2552,7 +2819,7 @@ function canEnq(n){return S.biens.papier>=1||S.mon>=n}
 function payEnq(n){if(S.biens.papier>=1)S.biens.papier-=1;else ch("mon",-n)}
 function justV(c,t){hon(hasN("juge")?4:2);gainMerit(hasN("juge")?.5:.25,"");return t}
 function unjust(c,t){hon(-3);ch("cont",-2);return t}
-function forced(){if(S.chantier){S.chantier.reste-=15;var l=S.chantier.label;if(S.chantier.reste<=0)finishChantier();return " Le condamné travaille au chantier ("+l+")."}ch("bois",5);return " Le condamné coupe du bois pour le village."}
+function forced(){if(S.chantiers.length){var fc=S.chantiers[0];fc.reste-=15;var l=fc.label;if(fc.reste<=0)finishChantier(fc);return " Le condamné travaille au chantier ("+l+")."}ch("bois",5);return " Le condamné coupe du bois pour le village."}
 var CASES={
  borne:{t:"Une borne déplacée",x:function(c){return c.a+" accuse son voisin "+c.b+" d’avoir déplacé de nuit la borne qui sépare leurs rizières."},
   o:[{l:function(){return S.biens.papier>=1?"Enquêter avant de juger (1 rame de papier)":"Enquêter avant de juger (10 mon)"},ok:function(){return canEnq(10)},fx:function(c){payEnq(10);return justV(c,(c.truth?c.b:c.a)+" avait triché. La borne retrouve sa place.")}},
